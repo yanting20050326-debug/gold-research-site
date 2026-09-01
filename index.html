@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<title>黃金相關研究</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root {
+    --bg: #f6f8fb;
+    --card-bg: #ffffff;
+    --stat-bg: #fbfdff;
+    --border: #d9e2ef;
+    --text: #111827;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --accent: #2563eb;
+    --accent-shadow: rgba(37, 99, 235, 0.35);
+    --card-shadow: rgba(15, 23, 42, 0.08);
+    --gold: #b45309;
+    --gold-bg: #fff7e6;
+    --gold-border: #f0c869;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+    margin: 0;
+    padding: 32px 16px 48px;
+    background: var(--bg);
+    color: var(--text);
+  }
+  .shell { max-width: 880px; margin: 0 auto; }
+  h1 { font-size: 32px; font-weight: 700; margin: 0 0 16px; }
+  h2 { font-size: 20px; font-weight: 700; margin: 0 0 8px; }
+  h3 { font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .disclaimer { background: var(--gold-bg); border: 1px solid var(--gold-border); color: #7a4a00; padding: 12px 16px; border-radius: 8px; margin-bottom: 20px; font-size: 14px; }
+  .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 16px; box-shadow: 0 18px 50px var(--card-shadow); }
+  .badge { display: inline-block; background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-border); padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 700; margin-left: 8px; vertical-align: middle; }
+  .badge-warn { background: #fee2e2; color: #b91c1c; border-color: #fca5a5; }
+  .badge-ok { background: #e0f2e9; color: #15803d; border-color: #86efac; }
+  .indicator-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 12px; }
+  .indicator { background: var(--stat-bg); border: 1px solid var(--border); padding: 12px 14px; border-radius: 8px; cursor: pointer; }
+  .indicator-summary { font-weight: 700; }
+  .indicator-signal { margin-top: 6px; font-size: 12px; color: var(--text-secondary); }
+  .indicator-detail { margin-top: 8px; font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
+  .tab-bar { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tab-button { background: var(--card-bg); color: var(--text-secondary); border: 1px solid var(--border); border-radius: 8px; padding: 10px 16px; cursor: pointer; font-size: 15px; font-weight: 700; font-family: inherit; }
+  .tab-button.active { background: var(--accent); color: #ffffff; border-color: var(--accent); box-shadow: 0 8px 20px var(--accent-shadow); }
+  .source-note { color: var(--text-muted); font-size: 12px; margin-top: 8px; }
+  .gauge-wrap { margin-top: 10px; }
+  .gauge-track { position: relative; height: 8px; background: linear-gradient(90deg, #86efac, #fde68a, #fca5a5); border-radius: 999px; }
+  .gauge-marker { position: absolute; top: -4px; width: 4px; height: 16px; background: var(--text); border-radius: 2px; transform: translateX(-2px); }
+  .gauge-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+  .score-card { background: var(--stat-bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  .score-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .score-label { font-weight: 700; font-size: 15px; }
+  .score-composite { font-weight: 700; font-size: 28px; color: var(--accent); }
+  .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 8px; margin-top: 10px; }
+  .score-item { background: var(--card-bg); border: 1px solid var(--border); border-radius: 6px; padding: 8px; text-align: center; }
+  .score-item-label { display: block; font-size: 11px; color: var(--text-muted); }
+  .score-item-value { display: block; font-weight: 700; font-size: 18px; margin-top: 2px; }
+  .live-dot { display: inline-block; width: 8px; height: 8px; border-radius: 999px; background: #22c55e; margin-right: 6px; vertical-align: middle; }
+  .ai-summary-card { background: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  .discipline-card { background: var(--gold-bg); border: 1px solid var(--gold-border); border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  .discipline-list { margin: 8px 0 0; padding-left: 20px; font-size: 13px; line-height: 1.6; color: var(--text-secondary); }
+  .buy-hint { background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 10px 14px; margin-bottom: 10px; }
+  .buy-hint-text { font-weight: 700; color: #1e40af; margin: 0; }
+  .passbook-card { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+  <div class="shell">
+  <h1>黃金相關研究</h1>
+  <div class="disclaimer" id="disclaimer"></div>
+  <p class="source-note" id="page-updated-line">頁面最後更新：<span id="page-updated-time">--:--:--</span></p>
+  <div class="tab-bar" id="target-tabs"></div>
+  <div class="card" id="target-card"></div>
+  <div class="card" id="macro-card"></div>
+  </div>
+<script>
+const SITE_DATA = {"generated_at": "2026-09-01T19:06:46.227518+08:00", "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。", "auto_refresh_seconds": 60, "live_refresh_seconds": 15, "targets": {"00635U": {"code": "00635U", "display_name": "元大S&P黃金", "asset_class": "commodity_futures_etf", "asset_class_note": "商品期貨型ETF，追蹤COMEX黃金期貨，受美元、實質利率、避險情緒、通膨預期影響，不是公司基本面驅動；沒有槓桿，長期持有不會有槓桿耗損，但期貨轉倉遇到正價差時會有小幅轉倉成本，長期報酬可能略遜於現貨金價；MA/RSI/布林/MACD 是通用技術工具，解讀方式跟股票型ETF不同。", "badge": "商品／避險資產，非股票型ETF", "pullback_scale": 1.0, "data_source": {"name": "TWSE STOCK_DAY", "as_of": "2026-09-01"}, "latest": {"trading_date": "2026-09-01", "close": 45.8, "volume": 3506208, "quote_time": "13:30:00", "is_realtime": true}, "indicators": {"ma20": 45.952, "rsi14": 53.54806700670135, "bollinger": {"upper": 48.7121420253313, "middle": 45.952, "lower": 43.19185797466869}, "macd": {"macd": 0.9996241769573402, "signal": 1.1102020942907107, "histogram": -0.11057791733337052}, "volatility_squeeze": {"short_vol": 0.01142082706153571, "long_vol": 0.01576151540064005, "ratio": 0.7246020938489156, "is_compressed": false}, "relative_position": {"position": 0.6290322580645156, "label": "區間中段"}, "pullback_stage": {"recent_high": 48.1, "pullback_pct": 4.78170478170479, "stage": "加碼 20%（前提：趨勢沒壞）", "hint": "符合加碼條件，若趨勢未壞可加碼 20%"}, "prior_low": {"price": 44.81, "days_before_high": 8}, "technical_score": {"scores": {"rsi14": 46.45193299329865, "bollinger": 52.75348149850652, "ma20": 51.65389972144848, "macd": 28.174144607918336}, "composite": 44.758364705293, "label": "技術面中性"}, "stage_signals": {"trend_intact": false, "momentum_stabilizing": false, "macd_golden_cross": false}}, "chart": [{"trading_date": "2026-07-01", "close": 41.46}, {"trading_date": "2026-07-02", "close": 42.31}, {"trading_date": "2026-07-03", "close": 43.6}, {"trading_date": "2026-07-06", "close": 43.35}, {"trading_date": "2026-07-07", "close": 43.0}, {"trading_date": "2026-07-08", "close": 43.01}, {"trading_date": "2026-07-09", "close": 42.42}, {"trading_date": "2026-07-13", "close": 42.31}, {"trading_date": "2026-07-14", "close": 41.91}, {"trading_date": "2026-07-15", "close": 41.97}, {"trading_date": "2026-07-16", "close": 41.97}, {"trading_date": "2026-07-17", "close": 41.39}, {"trading_date": "2026-07-20", "close": 41.8}, {"trading_date": "2026-07-21", "close": 42.26}, {"trading_date": "2026-07-22", "close": 42.99}, {"trading_date": "2026-07-23", "close": 42.9}, {"trading_date": "2026-07-24", "close": 41.95}, {"trading_date": "2026-07-27", "close": 42.59}, {"trading_date": "2026-07-28", "close": 42.03}, {"trading_date": "2026-07-29", "close": 41.9}, {"trading_date": "2026-07-30", "close": 42.03}, {"trading_date": "2026-07-31", "close": 42.44}, {"trading_date": "2026-08-03", "close": 42.26}, {"trading_date": "2026-08-04", "close": 42.2}, {"trading_date": "2026-08-05", "close": 43.03}, {"trading_date": "2026-08-06", "close": 44.27}, {"trading_date": "2026-08-07", "close": 44.35}, {"trading_date": "2026-08-10", "close": 45.03}, {"trading_date": "2026-08-11", "close": 45.64}, {"trading_date": "2026-08-12", "close": 45.66}, {"trading_date": "2026-08-13", "close": 45.67}, {"trading_date": "2026-08-14", "close": 44.81}, {"trading_date": "2026-08-17", "close": 45.54}, {"trading_date": "2026-08-18", "close": 45.49}, {"trading_date": "2026-08-19", "close": 44.97}, {"trading_date": "2026-08-20", "close": 46.51}, {"trading_date": "2026-08-21", "close": 46.96}, {"trading_date": "2026-08-24", "close": 48.07}, {"trading_date": "2026-08-25", "close": 48.07}, {"trading_date": "2026-08-26", "close": 48.1}, {"trading_date": "2026-08-27", "close": 47.8}, {"trading_date": "2026-08-28", "close": 47.38}, {"trading_date": "2026-08-31", "close": 45.89}, {"trading_date": "2026-09-01", "close": 45.8}], "ai_summary": {"text": "今日國際金價維持平盤且美元對台幣微幅升值，理論上基礎資產表現相對平穩，但元大S&P黃金卻出現超過3%的顯著下跌。在技術面呈中性且外部因素無劇烈變化下，此跌幅推測主要源於該 ETF 在地交易市場的價格調整，例如先前溢價過高的收斂修正，或是投資人在短期內的集中獲利了結賣壓所致。", "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"}}, "00708L": {"code": "00708L", "display_name": "期元大S&P黃金正2", "asset_class": "leveraged_futures_etf", "asset_class_note": "槓桿期貨型ETF（2倍），追蹤COMEX黃金期貨單日報酬的2倍，僅適合短線操作；長期持有會因複利效應偏離原型指數，不建議當作定期定額標的。", "badge": "2倍槓桿，僅適合短線", "pullback_scale": 2.0, "data_source": {"name": "TWSE STOCK_DAY", "as_of": "2026-09-01"}, "latest": {"trading_date": "2026-09-01", "close": 82.05, "volume": 4832755, "quote_time": "13:30:00", "is_realtime": true}, "indicators": {"ma20": 83.14500000000001, "rsi14": 52.04468174716297, "bollinger": {"upper": 92.88368060878886, "middle": 83.14500000000001, "lower": 73.40631939121116}, "macd": {"macd": 3.3683627390519177, "signal": 3.7847386912265355, "histogram": -0.41637595217461776}, "volatility_squeeze": {"short_vol": 0.02184490681385346, "long_vol": 0.031411749585888354, "ratio": 0.6954374430537046, "is_compressed": false}, "relative_position": {"position": 0.5878220140515222, "label": "區間中段"}, "pullback_stage": {"recent_high": 90.85, "pullback_pct": 9.686296092460097, "stage": "加碼 20%（前提：趨勢沒壞）", "hint": "符合加碼條件，若趨勢未壞可加碼 20%"}, "prior_low": {"price": 78.8, "days_before_high": 8}, "technical_score": {"scores": {"rsi14": 47.95531825283703, "bollinger": 55.621911447695545, "ma20": 56.58488183294253, "macd": 8.947437671518372}, "composite": 42.27738730124837, "label": "技術面中性"}, "stage_signals": {"trend_intact": false, "momentum_stabilizing": false, "macd_golden_cross": false}}, "chart": [{"trading_date": "2026-07-01", "close": 68.05}, {"trading_date": "2026-07-02", "close": 71.0}, {"trading_date": "2026-07-03", "close": 75.15}, {"trading_date": "2026-07-06", "close": 74.3}, {"trading_date": "2026-07-07", "close": 73.3}, {"trading_date": "2026-07-08", "close": 73.25}, {"trading_date": "2026-07-09", "close": 71.25}, {"trading_date": "2026-07-13", "close": 70.9}, {"trading_date": "2026-07-14", "close": 69.6}, {"trading_date": "2026-07-15", "close": 69.55}, {"trading_date": "2026-07-16", "close": 69.65}, {"trading_date": "2026-07-17", "close": 67.8}, {"trading_date": "2026-07-20", "close": 69.15}, {"trading_date": "2026-07-21", "close": 70.5}, {"trading_date": "2026-07-22", "close": 73.0}, {"trading_date": "2026-07-23", "close": 72.85}, {"trading_date": "2026-07-24", "close": 69.5}, {"trading_date": "2026-07-27", "close": 71.65}, {"trading_date": "2026-07-28", "close": 69.9}, {"trading_date": "2026-07-29", "close": 69.6}, {"trading_date": "2026-07-30", "close": 69.95}, {"trading_date": "2026-07-31", "close": 71.25}, {"trading_date": "2026-08-03", "close": 70.45}, {"trading_date": "2026-08-04", "close": 70.55}, {"trading_date": "2026-08-05", "close": 73.25}, {"trading_date": "2026-08-06", "close": 77.15}, {"trading_date": "2026-08-07", "close": 77.6}, {"trading_date": "2026-08-10", "close": 80.0}, {"trading_date": "2026-08-11", "close": 82.1}, {"trading_date": "2026-08-12", "close": 82.1}, {"trading_date": "2026-08-13", "close": 82.25}, {"trading_date": "2026-08-14", "close": 78.8}, {"trading_date": "2026-08-17", "close": 81.75}, {"trading_date": "2026-08-18", "close": 81.5}, {"trading_date": "2026-08-19", "close": 79.65}, {"trading_date": "2026-08-20", "close": 85.05}, {"trading_date": "2026-08-21", "close": 86.75}, {"trading_date": "2026-08-24", "close": 90.65}, {"trading_date": "2026-08-25", "close": 90.8}, {"trading_date": "2026-08-26", "close": 90.85}, {"trading_date": "2026-08-27", "close": 89.75}, {"trading_date": "2026-08-28", "close": 88.15}, {"trading_date": "2026-08-31", "close": 82.7}, {"trading_date": "2026-09-01", "close": 82.05}], "ai_summary": {"text": "今日期元大S&P黃金正2重挫6.18%，然而國際金價（-0.01%）與美元兌台幣（+0.08%）均呈現接近平盤走勢，顯示此跌幅並非由標的資產的實質走弱所帶動。在技術面維持中性且標的資產平穩的情況下，推測大幅下跌的主要原因可能為該槓桿ETF先前累積的溢價進行了劇烈收斂，或是反映台股與國際期貨市場交易時間差的補跌效應。這類正向2倍槓桿工具在市場籌碼調整時，較容易出現價格與國際金價短期脫鉤的現象。", "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"}}, "GCF": {"code": "GCF", "display_name": "國際盤黃金（COMEX）", "asset_class": "commodity_futures", "asset_class_note": "追蹤COMEX黃金期貨（Yahoo Finance代碼GC=F），不是銀行間即期黃金報價（真正的XAUUSD）；兩者走勢高度連動、價差通常很小，但不是同一個報價來源。是台灣黃金相關標的（00635U、00708L、銀行黃金存摺）的共同定價基礎，本身無法在台灣交易所直接買賣。", "badge": "COMEX期貨報價，非台股標的", "pullback_scale": 1.0, "quote_delay_note": "Yahoo Finance 免費期貨資料通常延遲約 10 分鐘，此標的的即時價格不會比這個延遲更即時，跟 TWSE 標的的近乎即時報價不同。", "data_source": {"name": "Yahoo Finance (GC=F)", "as_of": "2026-09-01"}, "latest": {"trading_date": "2026-09-01", "close": 4424.7001953125, "volume": null, "quote_time": "2026-09-01 18:56", "is_realtime": true}, "indicators": {"ma20": 4448.025, "rsi14": 52.61842509520129, "bollinger": {"upper": 4688.228680718162, "middle": 4448.025, "lower": 4207.8213192818375}, "macd": {"macd": 85.37498477535155, "signal": 98.83777744119803, "histogram": -13.462792665846479}, "volatility_squeeze": {"short_vol": 0.010708820701436155, "long_vol": 0.014852126812127033, "ratio": 0.7210294415673995, "is_compressed": false}, "relative_position": {"position": 0.6440460195738819, "label": "區間中段"}, "pullback_stage": {"recent_high": 4640.7998046875, "pullback_pct": 4.656516515897233, "stage": "加碼 20%（前提：趨勢沒壞）", "hint": "符合加碼條件，若趨勢未壞可加碼 20%"}, "prior_low": {"price": 4033.699951171875, "days_before_high": 15}, "technical_score": {"scores": {"rsi14": 47.38157490479871, "bollinger": 54.855213837224106, "ma20": 52.62192823640825, "macd": 30.704910839880796}, "composite": 46.390906954577964, "label": "技術面中性"}, "stage_signals": {"trend_intact": false, "momentum_stabilizing": false, "macd_golden_cross": false}}, "chart": [{"trading_date": "2026-03-02", "close": 5294.39990234375}, {"trading_date": "2026-03-03", "close": 5107.39990234375}, {"trading_date": "2026-03-04", "close": 5120.2001953125}, {"trading_date": "2026-03-05", "close": 5065.2998046875}, {"trading_date": "2026-03-06", "close": 5146.10009765625}, {"trading_date": "2026-03-09", "close": 5091.5}, {"trading_date": "2026-03-10", "close": 5229.7001953125}, {"trading_date": "2026-03-11", "close": 5167.39990234375}, {"trading_date": "2026-03-12", "close": 5115.7998046875}, {"trading_date": "2026-03-13", "close": 5052.5}, {"trading_date": "2026-03-16", "close": 4994.0}, {"trading_date": "2026-03-17", "close": 5001.0}, {"trading_date": "2026-03-18", "close": 4889.89990234375}, {"trading_date": "2026-03-19", "close": 4600.7001953125}, {"trading_date": "2026-03-20", "close": 4570.39990234375}, {"trading_date": "2026-03-23", "close": 4404.10009765625}, {"trading_date": "2026-03-24", "close": 4399.2998046875}, {"trading_date": "2026-03-25", "close": 4549.7998046875}, {"trading_date": "2026-03-26", "close": 4375.5}, {"trading_date": "2026-03-27", "close": 4492.0}, {"trading_date": "2026-03-30", "close": 4526.0}, {"trading_date": "2026-03-31", "close": 4647.60009765625}, {"trading_date": "2026-04-01", "close": 4783.2001953125}, {"trading_date": "2026-04-02", "close": 4651.5}, {"trading_date": "2026-04-06", "close": 4656.7998046875}, {"trading_date": "2026-04-07", "close": 4657.10009765625}, {"trading_date": "2026-04-08", "close": 4749.5}, {"trading_date": "2026-04-09", "close": 4792.2001953125}, {"trading_date": "2026-04-10", "close": 4761.89990234375}, {"trading_date": "2026-04-13", "close": 4742.39990234375}, {"trading_date": "2026-04-14", "close": 4825.0}, {"trading_date": "2026-04-15", "close": 4800.0}, {"trading_date": "2026-04-16", "close": 4785.39990234375}, {"trading_date": "2026-04-17", "close": 4857.60009765625}, {"trading_date": "2026-04-20", "close": 4806.60009765625}, {"trading_date": "2026-04-21", "close": 4698.39990234375}, {"trading_date": "2026-04-22", "close": 4732.5}, {"trading_date": "2026-04-23", "close": 4705.10009765625}, {"trading_date": "2026-04-24", "close": 4722.2998046875}, {"trading_date": "2026-04-27", "close": 4675.39990234375}, {"trading_date": "2026-04-28", "close": 4591.5}, {"trading_date": "2026-04-29", "close": 4545.2001953125}, {"trading_date": "2026-04-30", "close": 4614.7001953125}, {"trading_date": "2026-05-01", "close": 4629.89990234375}, {"trading_date": "2026-05-04", "close": 4519.5}, {"trading_date": "2026-05-05", "close": 4555.7998046875}, {"trading_date": "2026-05-06", "close": 4681.89990234375}, {"trading_date": "2026-05-07", "close": 4699.7998046875}, {"trading_date": "2026-05-08", "close": 4720.39990234375}, {"trading_date": "2026-05-11", "close": 4718.7001953125}, {"trading_date": "2026-05-12", "close": 4677.60009765625}, {"trading_date": "2026-05-13", "close": 4697.7001953125}, {"trading_date": "2026-05-14", "close": 4678.10009765625}, {"trading_date": "2026-05-15", "close": 4555.7998046875}, {"trading_date": "2026-05-18", "close": 4552.5}, {"trading_date": "2026-05-19", "close": 4506.2998046875}, {"trading_date": "2026-05-20", "close": 4531.2998046875}, {"trading_date": "2026-05-21", "close": 4539.7998046875}, {"trading_date": "2026-05-22", "close": 4521.0}, {"trading_date": "2026-05-26", "close": 4500.39990234375}, {"trading_date": "2026-05-27", "close": 4447.5}, {"trading_date": "2026-05-28", "close": 4499.2998046875}, {"trading_date": "2026-05-29", "close": 4560.5}, {"trading_date": "2026-06-01", "close": 4475.2001953125}, {"trading_date": "2026-06-02", "close": 4489.10009765625}, {"trading_date": "2026-06-03", "close": 4436.7001953125}, {"trading_date": "2026-06-04", "close": 4475.7998046875}, {"trading_date": "2026-06-05", "close": 4337.10009765625}, {"trading_date": "2026-06-08", "close": 4335.89990234375}, {"trading_date": "2026-06-09", "close": 4260.0}, {"trading_date": "2026-06-10", "close": 4108.2001953125}, {"trading_date": "2026-06-11", "close": 4090.300048828125}, {"trading_date": "2026-06-12", "close": 4215.0}, {"trading_date": "2026-06-15", "close": 4328.0}, {"trading_date": "2026-06-16", "close": 4330.89990234375}, {"trading_date": "2026-06-17", "close": 4358.89990234375}, {"trading_date": "2026-06-18", "close": 4224.10009765625}, {"trading_date": "2026-06-22", "close": 4181.89990234375}, {"trading_date": "2026-06-23", "close": 4129.89990234375}, {"trading_date": "2026-06-24", "close": 3990.300048828125}, {"trading_date": "2026-06-25", "close": 4030.5}, {"trading_date": "2026-06-26", "close": 4078.699951171875}, {"trading_date": "2026-06-29", "close": 4022.300048828125}, {"trading_date": "2026-06-30", "close": 4022.89990234375}, {"trading_date": "2026-07-01", "close": 4068.300048828125}, {"trading_date": "2026-07-02", "close": 4112.7001953125}, {"trading_date": "2026-07-06", "close": 4155.10009765625}, {"trading_date": "2026-07-07", "close": 4145.2998046875}, {"trading_date": "2026-07-08", "close": 4070.89990234375}, {"trading_date": "2026-07-09", "close": 4130.60009765625}, {"trading_date": "2026-07-10", "close": 4104.10009765625}, {"trading_date": "2026-07-13", "close": 3997.0}, {"trading_date": "2026-07-14", "close": 4061.10009765625}, {"trading_date": "2026-07-15", "close": 4044.0}, {"trading_date": "2026-07-16", "close": 3985.60009765625}, {"trading_date": "2026-07-17", "close": 4012.699951171875}, {"trading_date": "2026-07-20", "close": 4010.300048828125}, {"trading_date": "2026-07-21", "close": 4071.10009765625}, {"trading_date": "2026-07-22", "close": 4146.89990234375}, {"trading_date": "2026-07-23", "close": 4046.60009765625}, {"trading_date": "2026-07-24", "close": 4067.60009765625}, {"trading_date": "2026-07-27", "close": 4074.5}, {"trading_date": "2026-07-28", "close": 4036.300048828125}, {"trading_date": "2026-07-29", "close": 4034.699951171875}, {"trading_date": "2026-07-30", "close": 4100.10009765625}, {"trading_date": "2026-07-31", "close": 4049.10009765625}, {"trading_date": "2026-08-03", "close": 4033.699951171875}, {"trading_date": "2026-08-04", "close": 4095.39990234375}, {"trading_date": "2026-08-05", "close": 4245.7998046875}, {"trading_date": "2026-08-06", "close": 4242.0}, {"trading_date": "2026-08-07", "close": 4340.7001953125}, {"trading_date": "2026-08-10", "close": 4361.7998046875}, {"trading_date": "2026-08-11", "close": 4383.0}, {"trading_date": "2026-08-12", "close": 4408.89990234375}, {"trading_date": "2026-08-13", "close": 4363.60009765625}, {"trading_date": "2026-08-14", "close": 4380.39990234375}, {"trading_date": "2026-08-17", "close": 4417.7998046875}, {"trading_date": "2026-08-18", "close": 4366.0}, {"trading_date": "2026-08-19", "close": 4489.39990234375}, {"trading_date": "2026-08-20", "close": 4516.2998046875}, {"trading_date": "2026-08-21", "close": 4624.10009765625}, {"trading_date": "2026-08-24", "close": 4640.7998046875}, {"trading_date": "2026-08-25", "close": 4638.10009765625}, {"trading_date": "2026-08-26", "close": 4598.2001953125}, {"trading_date": "2026-08-27", "close": 4609.7001953125}, {"trading_date": "2026-08-28", "close": 4478.10009765625}, {"trading_date": "2026-08-31", "close": 4431.10009765625}, {"trading_date": "2026-09-01", "close": 4424.7001953125}], "passbook": {"unit": "NT$/公克（試算）", "latest_price": 4510.555949601128, "relative_position": {"position": 0.6136830658593183, "label": "區間中段"}, "pullback_stage": {"recent_high": 4748.212550472091, "pullback_pct": 5.0051803356472195, "stage": "加碼 20%（前提：趨勢沒壞）", "hint": "符合加碼條件，若趨勢未壞可加碼 20%"}, "technical_score": {"scores": {"rsi14": 48.250688927349685, "bollinger": 46.20158729459718, "ma20": 47.002693680856815, "macd": 28.62500564938699}, "composite": 42.519993888047665, "label": "技術面中性"}, "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"}, "ai_summary": {"text": "今日國際金價微幅上揚 0.13%，在美元兌台幣亦小幅上升（+0.05%）的情況下，顯示本次金價上漲主要並非由美元走弱所帶動。結合技術面維持中性狀態，推測今日走勢主要受到市場溫和的避險需求或基礎買盤支撐，使盤勢在缺乏強烈催化劑下呈現小幅偏多震盪。", "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"}}}, "macro_context": {"data_source": {"name": "Yahoo Finance", "as_of": "2026-09-01"}, "usdtwd": [{"date": "2026-03-02", "close": 31.375}, {"date": "2026-03-03", "close": 31.53499984741211}, {"date": "2026-03-04", "close": 31.733999252319336}, {"date": "2026-03-05", "close": 31.6299991607666}, {"date": "2026-03-06", "close": 31.905899047851562}, {"date": "2026-03-09", "close": 31.80229949951172}, {"date": "2026-03-10", "close": 31.802000045776367}, {"date": "2026-03-11", "close": 31.77389907836914}, {"date": "2026-03-12", "close": 31.811500549316406}, {"date": "2026-03-13", "close": 31.89579963684082}, {"date": "2026-03-16", "close": 32.16310119628906}, {"date": "2026-03-17", "close": 31.94499969482422}, {"date": "2026-03-18", "close": 31.885000228881836}, {"date": "2026-03-19", "close": 32.03120040893555}, {"date": "2026-03-20", "close": 31.802099227905273}, {"date": "2026-03-23", "close": 32.02170181274414}, {"date": "2026-03-24", "close": 31.86199951171875}, {"date": "2026-03-25", "close": 31.925800323486328}, {"date": "2026-03-26", "close": 31.93589973449707}, {"date": "2026-03-27", "close": 31.93000030517578}, {"date": "2026-03-29", "close": 31.976999282836914}, {"date": "2026-03-30", "close": 32.03900146484375}, {"date": "2026-03-31", "close": 31.93790054321289}, {"date": "2026-04-01", "close": 32.00199890136719}, {"date": "2026-04-02", "close": 31.938100814819336}, {"date": "2026-04-05", "close": 31.96299934387207}, {"date": "2026-04-06", "close": 31.913999557495117}, {"date": "2026-04-07", "close": 31.893999099731445}, {"date": "2026-04-08", "close": 31.720399856567383}, {"date": "2026-04-09", "close": 31.725799560546875}, {"date": "2026-04-12", "close": 31.767000198364258}, {"date": "2026-04-13", "close": 31.641199111938477}, {"date": "2026-04-14", "close": 31.517000198364258}, {"date": "2026-04-15", "close": 31.586999893188477}, {"date": "2026-04-16", "close": 31.558000564575195}, {"date": "2026-04-19", "close": 31.468000411987305}, {"date": "2026-04-20", "close": 31.41900062561035}, {"date": "2026-04-21", "close": 31.48200035095215}, {"date": "2026-04-22", "close": 31.466800689697266}, {"date": "2026-04-23", "close": 31.530000686645508}, {"date": "2026-04-26", "close": 31.440000534057617}, {"date": "2026-04-27", "close": 31.455699920654297}, {"date": "2026-04-28", "close": 31.51300048828125}, {"date": "2026-04-29", "close": 31.62649917602539}, {"date": "2026-04-30", "close": 31.569000244140625}, {"date": "2026-05-03", "close": 31.554000854492188}, {"date": "2026-05-04", "close": 31.597999572753906}, {"date": "2026-05-05", "close": 31.545000076293945}, {"date": "2026-05-06", "close": 31.398500442504883}, {"date": "2026-05-07", "close": 31.392099380493164}, {"date": "2026-05-10", "close": 31.301000595092773}, {"date": "2026-05-11", "close": 31.3518009185791}, {"date": "2026-05-12", "close": 31.501100540161133}, {"date": "2026-05-13", "close": 31.55900001525879}, {"date": "2026-05-14", "close": 31.56439971923828}, {"date": "2026-05-17", "close": 31.586999893188477}, {"date": "2026-05-18", "close": 31.554100036621094}, {"date": "2026-05-19", "close": 31.72920036315918}, {"date": "2026-05-20", "close": 31.59119987487793}, {"date": "2026-05-21", "close": 31.550800323486328}, {"date": "2026-05-24", "close": 31.43899917602539}, {"date": "2026-05-25", "close": 31.448400497436523}, {"date": "2026-05-26", "close": 31.445899963378906}, {"date": "2026-05-27", "close": 31.465900421142578}, {"date": "2026-05-28", "close": 31.423999786376953}, {"date": "2026-05-31", "close": 31.412900924682617}, {"date": "2026-06-01", "close": 31.33049964904785}, {"date": "2026-06-02", "close": 31.478200912475586}, {"date": "2026-06-03", "close": 31.50550079345703}, {"date": "2026-06-04", "close": 31.503000259399414}, {"date": "2026-06-07", "close": 31.58810043334961}, {"date": "2026-06-08", "close": 31.582000732421875}, {"date": "2026-06-09", "close": 31.5408992767334}, {"date": "2026-06-10", "close": 31.649799346923828}, {"date": "2026-06-11", "close": 31.57900047302246}, {"date": "2026-06-14", "close": 31.613000869750977}, {"date": "2026-06-15", "close": 31.518600463867188}, {"date": "2026-06-16", "close": 31.563899993896484}, {"date": "2026-06-17", "close": 31.638399124145508}, {"date": "2026-06-18", "close": 31.635900497436523}, {"date": "2026-06-21", "close": 31.70199966430664}, {"date": "2026-06-22", "close": 31.687000274658203}, {"date": "2026-06-23", "close": 31.70210075378418}, {"date": "2026-06-24", "close": 31.808000564575195}, {"date": "2026-06-25", "close": 31.860000610351562}, {"date": "2026-06-28", "close": 31.847000122070312}, {"date": "2026-06-29", "close": 31.86590003967285}, {"date": "2026-06-30", "close": 31.834400177001953}, {"date": "2026-07-01", "close": 31.894800186157227}, {"date": "2026-07-02", "close": 31.93090057373047}, {"date": "2026-07-05", "close": 31.92799949645996}, {"date": "2026-07-06", "close": 32.054901123046875}, {"date": "2026-07-07", "close": 32.13589859008789}, {"date": "2026-07-08", "close": 32.10919952392578}, {"date": "2026-07-09", "close": 32.097198486328125}, {"date": "2026-07-12", "close": 32.099098205566406}, {"date": "2026-07-13", "close": 32.1619987487793}, {"date": "2026-07-14", "close": 32.1338996887207}, {"date": "2026-07-15", "close": 32.210899353027344}, {"date": "2026-07-16", "close": 32.26430130004883}, {"date": "2026-07-19", "close": 32.3129997253418}, {"date": "2026-07-20", "close": 32.275901794433594}, {"date": "2026-07-21", "close": 32.325401306152344}, {"date": "2026-07-22", "close": 32.37910079956055}, {"date": "2026-07-23", "close": 32.29899978637695}, {"date": "2026-07-26", "close": 32.32229995727539}, {"date": "2026-07-27", "close": 32.301998138427734}, {"date": "2026-07-28", "close": 32.363800048828125}, {"date": "2026-07-29", "close": 32.348899841308594}, {"date": "2026-07-30", "close": 32.39500045776367}, {"date": "2026-08-02", "close": 32.29309844970703}, {"date": "2026-08-03", "close": 32.395999908447266}, {"date": "2026-08-04", "close": 32.39509963989258}, {"date": "2026-08-05", "close": 32.264801025390625}, {"date": "2026-08-06", "close": 32.2067985534668}, {"date": "2026-08-09", "close": 32.23509979248047}, {"date": "2026-08-10", "close": 32.22710037231445}, {"date": "2026-08-11", "close": 32.20909881591797}, {"date": "2026-08-12", "close": 32.202301025390625}, {"date": "2026-08-13", "close": 32.12409973144531}, {"date": "2026-08-16", "close": 31.99020004272461}, {"date": "2026-08-17", "close": 31.850299835205078}, {"date": "2026-08-18", "close": 31.881900787353516}, {"date": "2026-08-19", "close": 31.815099716186523}, {"date": "2026-08-20", "close": 31.838300704956055}, {"date": "2026-08-23", "close": 31.82200050354004}, {"date": "2026-08-24", "close": 31.812000274658203}, {"date": "2026-08-25", "close": 31.841899871826172}, {"date": "2026-08-26", "close": 31.80590057373047}, {"date": "2026-08-27", "close": 31.660900115966797}, {"date": "2026-08-30", "close": 31.625999450683594}, {"date": "2026-09-01", "close": 31.707000732421875}], "stale": false, "note": "總體背景參考，非本頁技術指標，僅供市場情緒判讀。", "divergence": {"same_direction_days": 1, "checked_days": 5, "is_divergent": false}}};
+
+const INDICATOR_EXPLANATIONS = {
+  ma20: "MA20 是近 20 個交易日的平均收盤價，用來看價格的中期趨勢方向。黃金的均線走勢常跟著美元指數、實質利率反向擺動，不是公司獲利成長那種趨勢。",
+  rsi14: "RSI14 衡量近期漲跌力道，超過 70 通常視為短線過熱、低於 30 視為超賣。黃金的 RSI 過熱經常是避險情緒推動（例如地緣政治或股災），不必然代表基本面轉弱，過熱不代表一定要賣。",
+  bollinger: "布林通道用近 20 日的平均價 ± 2 倍標準差，顯示目前價格相對波動區間的位置。黃金的波動區間常因美元走勢、央行政策會議而突然放大或收斂。",
+  macd: "MACD 比較短期與長期均線的差距，搭配訊號線判斷動能轉折。黃金的動能轉折常跟利率預期（例如聯準會會議）同步發生，本身沒有財報或產業循環可以對照。",
+  volatility_squeeze: "比較近 5 日和近 20 日的價格波動度。比值明顯偏低代表最近盤整、波動被壓縮，過去這種情況常是變盤（不管往上或往下）前兆，不代表方向。",
+  relative_position: "顯示今天收盤價在近 30 天最高最低區間中的相對位置。低點區不代表馬上反彈、高點區也不代表馬上回檔，只是提供「現在算便宜還是貴」的參考座標。",
+};
+
+function fmt(value, digits) {
+  if (value === null || value === undefined) return "資料不足";
+  return value.toFixed(digits);
+}
+
+function el(tag, props, children) {
+  const node = document.createElement(tag);
+  Object.assign(node, props || {});
+  (children || []).forEach((child) => node.appendChild(child));
+  return node;
+}
+
+function renderDisclaimer() {
+  document.getElementById("disclaimer").textContent = SITE_DATA.disclaimer;
+}
+
+function markPageUpdatedNow() {
+  const pad = (n) => String(n).padStart(2, "0");
+  const now = new Date();
+  const timeText = pad(now.getHours()) + ":" + pad(now.getMinutes()) + ":" + pad(now.getSeconds());
+  const el = document.getElementById("page-updated-time");
+  if (el) el.textContent = timeText;
+}
+
+function sparklinePath(points, width, height, padding) {
+  if (points.length === 0) return "";
+  const values = points.map((p) => p.close);
+  const min = Math.min(...values);
+  const max = Math.max(...values);
+  const range = max - min || 1;
+  const stepX = (width - padding * 2) / Math.max(points.length - 1, 1);
+  return values
+    .map((v, i) => {
+      const x = padding + i * stepX;
+      const y = padding + (height - padding * 2) * (1 - (v - min) / range);
+      return (i === 0 ? "M" : "L") + x.toFixed(1) + "," + y.toFixed(1);
+    })
+    .join(" ");
+}
+
+function renderSparkline(points, color) {
+  const width = 320;
+  const height = 80;
+  const padding = 6;
+  const path = sparklinePath(points, width, height, padding);
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("viewBox", "0 0 " + width + " " + height);
+  svg.setAttribute("width", "100%");
+  svg.setAttribute("height", height);
+  const pathEl = document.createElementNS(svgNS, "path");
+  pathEl.setAttribute("d", path);
+  pathEl.setAttribute("fill", "none");
+  pathEl.setAttribute("stroke", color);
+  pathEl.setAttribute("stroke-width", "2");
+  svg.appendChild(pathEl);
+  return svg;
+}
+
+function disciplineRules(scale) {
+  const t1 = 3 * scale, t2 = 4 * scale, t3 = 6 * scale, t4 = 9 * scale;
+  return [
+    "只做中期多頭的黃金。",
+    "不在暴漲創高時追價。",
+    "回檔 " + t1 + "～" + t2 + "% 開始第一筆 20%。",
+    "回檔 " + t2 + "～" + t3 + "%，趨勢沒壞（收盤價在 MA20 之上且未跌破起漲前低）再加 20%。",
+    t3 + "～" + t4 + "% 區間出現止跌（RSI14 比 3 天前回升且未創近 3 天新低），再加 20%。",
+    "最後 40% 一定等重新轉強（MACD 出現黃金交叉）。",
+    "跌破重要前低（起漲低點），立即停止加碼。",
+    "不要無限攤平。",
+    "+5%、+8%、+10～12% 分批獲利。",
+    "剩餘 40% 讓趨勢決定出場。",
+  ];
+}
+
+function stageSignalInfo(stage, signals) {
+  if (!signals) return null;
+  if (stage === "加碼 20%（前提：趨勢沒壞）") {
+    return { label: "趨勢是否還沒壞", value: signals.trend_intact };
+  }
+  if (stage === "加碼 20%（前提：出現止跌）") {
+    return { label: "是否已經止跌", value: signals.momentum_stabilizing };
+  }
+  if (stage === "最後 40%（等重新轉強）") {
+    return { label: "是否已經重新轉強（MACD 黃金交叉）", value: signals.macd_golden_cross };
+  }
+  return null;
+}
+
+function signalBadgeParagraph(label, value) {
+  const badgeText = value === true ? "✓ 符合" : value === false ? "✗ 尚未符合" : "資料不足";
+  const badgeClass = value === true ? "badge badge-ok" : value === false ? "badge badge-warn" : "badge";
+  const p = el("p", { className: "indicator-signal" });
+  p.appendChild(document.createTextNode(label + "："));
+  p.appendChild(el("span", { className: badgeClass, textContent: badgeText }));
+  return p;
+}
+
+function renderDisciplineCard(target) {
+  const wrap = el("div", { className: "discipline-card" });
+  wrap.appendChild(el("h3", { textContent: "核心交易紀律（個人參考，非自動訊號）" }));
+  const ps = target.indicators.pullback_stage;
+  if (ps) {
+    const hintBox = el("div", { className: "buy-hint" });
+    hintBox.appendChild(el("p", { className: "buy-hint-text", textContent: "提示：" + ps.hint }));
+    wrap.appendChild(hintBox);
+    wrap.appendChild(el("p", {
+      textContent: "近 30 天高點 " + fmt(ps.recent_high, 2) + "，目前回檔 " + fmt(ps.pullback_pct, 1) + "%，對照紀律大概落在：" + ps.stage,
+    }));
+    const signalInfo = stageSignalInfo(ps.stage, target.indicators.stage_signals);
+    if (signalInfo) {
+      wrap.appendChild(signalBadgeParagraph(signalInfo.label, signalInfo.value));
+    }
+  } else {
+    wrap.appendChild(el("p", { className: "source-note", textContent: "資料不足，無法計算目前回檔幅度。" }));
+  }
+  const pl = target.indicators.prior_low;
+  if (pl) {
+    wrap.appendChild(el("p", {
+      textContent: "起漲前低（" + pl.days_before_high + " 天前）：" + fmt(pl.price, 2) + "，跌破這裡代表這波漲勢可能已經轉弱。",
+    }));
+  } else {
+    wrap.appendChild(el("p", { className: "source-note", textContent: "資料不足，暫時抓不到明確的起漲前低。" }));
+  }
+  const scale = target.pullback_scale || 1;
+  if (scale !== 1) {
+    wrap.appendChild(el("p", { className: "source-note", textContent: "此標的為 " + scale + " 倍槓桿，以下回檔門檻已按 " + scale + " 倍幅度計算，跟現貨標的不是同一組數字。" }));
+  }
+  const list = el("ul", { className: "discipline-list" });
+  disciplineRules(scale).forEach((rule) => {
+    list.appendChild(el("li", { textContent: rule }));
+  });
+  wrap.appendChild(list);
+  wrap.appendChild(el("p", { className: "source-note", textContent: "回檔基準為近 30 天高點；趨勢是否轉強、止跌、跌破前低仍需自行判斷，本卡不做自動買賣訊號。獲利分批（+5%/+8%/+10~12%）需要你自己記錄進場價才能對照，本站不追蹤持倉。" }));
+  return wrap;
+}
+
+function renderPassbookEstimate(target) {
+  const pb = target.passbook;
+  if (!pb) return null;
+  const wrap = el("div", { className: "passbook-card" });
+  wrap.appendChild(el("h3", { textContent: "黃金存摺換算試算" }));
+  wrap.appendChild(el("p", { textContent: "試算價：" + fmt(pb.latest_price, 1) + " " + pb.unit }));
+  if (pb.pullback_stage) {
+    wrap.appendChild(el("p", {
+      textContent: "近 30 天高點 " + fmt(pb.pullback_stage.recent_high, 1) + "，目前回檔 " + fmt(pb.pullback_stage.pullback_pct, 1) + "%，對照存摺紀律大概落在：" + pb.pullback_stage.stage,
+    }));
+  } else if (pb.relative_position) {
+    wrap.appendChild(el("p", { textContent: "區間位置：" + fmt(pb.relative_position.position * 100, 0) + "%（" + pb.relative_position.label + "）" }));
+  } else {
+    wrap.appendChild(el("p", { className: "source-note", textContent: "資料不足，無法計算相對位置。" }));
+  }
+  if (pb.technical_score) {
+    wrap.appendChild(el("p", { textContent: "技術面：" + pb.technical_score.label + "（" + fmt(pb.technical_score.composite, 0) + " 分）" }));
+  }
+  wrap.appendChild(el("p", { className: "source-note", textContent: pb.note }));
+  return wrap;
+}
+
+function renderPositionGauge(rp) {
+  if (!rp) return null;
+  const wrap = el("div", { className: "gauge-wrap" });
+  const track = el("div", { className: "gauge-track" });
+  const marker = el("div", { className: "gauge-marker" });
+  const pct = Math.max(0, Math.min(100, rp.position * 100));
+  marker.style.left = pct.toFixed(1) + "%";
+  track.appendChild(marker);
+  wrap.appendChild(track);
+  const labels = el("div", { className: "gauge-labels" });
+  labels.appendChild(el("span", { textContent: "低點 0%" }));
+  labels.appendChild(el("span", { textContent: "高點 100%" }));
+  wrap.appendChild(labels);
+  return wrap;
+}
+
+const SCORE_ITEM_LABELS = { rsi14: "RSI14", bollinger: "布林通道", ma20: "MA20", macd: "MACD" };
+
+function renderTechnicalScore(target) {
+  const ts = target.indicators.technical_score;
+  if (!ts) return null;
+  const wrap = el("div", { className: "score-card" });
+  const headRow = el("div", { className: "score-head" });
+  headRow.appendChild(el("span", { className: "score-label", textContent: ts.label }));
+  headRow.appendChild(el("span", { className: "score-composite", textContent: fmt(ts.composite, 0) + " 分" }));
+  wrap.appendChild(headRow);
+  wrap.appendChild(el("p", { className: "source-note", textContent: "分數越高代表技術面越偏冷卻、分數越低代表越偏熱；由 RSI／布林／MA20／MACD 平均得出，僅供研究參考，不是進出場訊號。" }));
+  const grid = el("div", { className: "score-grid" });
+  Object.keys(ts.scores).forEach((key) => {
+    const item = el("div", { className: "score-item" });
+    item.appendChild(el("span", { className: "score-item-label", textContent: SCORE_ITEM_LABELS[key] || key }));
+    item.appendChild(el("span", { className: "score-item-value", textContent: fmt(ts.scores[key], 0) }));
+    grid.appendChild(item);
+  });
+  wrap.appendChild(grid);
+  return wrap;
+}
+
+function renderAiSummary(target) {
+  const summary = target.ai_summary;
+  if (!summary) return null;
+  const wrap = el("div", { className: "ai-summary-card" });
+  wrap.appendChild(el("h3", { textContent: "AI 推測：今天可能的漲跌原因" }));
+  wrap.appendChild(el("p", { textContent: summary.text }));
+  wrap.appendChild(el("p", { className: "source-note", textContent: summary.disclaimer }));
+  return wrap;
+}
+
+function indicatorCard(key, label, valueText, extraNode) {
+  const card = el("div", { className: "indicator", tabIndex: 0 });
+  const summary = el("div", { className: "indicator-summary", textContent: label + "：" + valueText });
+  card.appendChild(summary);
+  if (extraNode) card.appendChild(extraNode);
+  const detail = el("div", { className: "indicator-detail", textContent: INDICATOR_EXPLANATIONS[key] });
+  detail.style.display = "none";
+  card.appendChild(detail);
+  card.addEventListener("click", () => {
+    detail.style.display = detail.style.display === "none" ? "block" : "none";
+  });
+  return card;
+}
+
+let currentTargetCode = null;
+
+function renderTargetTabs() {
+  const codes = Object.keys(SITE_DATA.targets);
+  const tabBar = document.getElementById("target-tabs");
+  tabBar.innerHTML = "";
+  codes.forEach((code) => {
+    const label = SITE_DATA.targets[code].display_name + "（" + code + "）";
+    const btn = el("button", { className: "tab-button", textContent: label });
+    btn.dataset.code = code;
+    btn.addEventListener("click", () => {
+      renderTarget(code);
+    });
+    tabBar.appendChild(btn);
+  });
+}
+
+function updateTabActiveState() {
+  document.querySelectorAll("#target-tabs .tab-button").forEach((btn) => {
+    btn.classList.toggle("active", btn.dataset.code === currentTargetCode);
+  });
+}
+
+function renderTarget(code) {
+  currentTargetCode = code;
+  const target = SITE_DATA.targets[code];
+  const card = document.getElementById("target-card");
+  card.innerHTML = "";
+  const heading = el("h2", { textContent: target.display_name + " (" + target.code + ") " });
+  heading.appendChild(el("span", { className: "badge", textContent: target.badge }));
+  card.appendChild(heading);
+  card.appendChild(el("p", { textContent: target.asset_class_note }));
+  const priceLine = el("p", {});
+  if (target.latest.is_realtime) {
+    const dot = el("span", { className: "live-dot" });
+    priceLine.appendChild(dot);
+    priceLine.appendChild(document.createTextNode("現在：" + fmt(target.latest.close, 2) + "（" + target.latest.quote_time + " 盤中，非官方公告價）"));
+  } else {
+    priceLine.appendChild(document.createTextNode("最新收盤：" + fmt(target.latest.close, 2) + "（" + target.latest.trading_date + "，非即時）"));
+  }
+  card.appendChild(priceLine);
+  if (target.quote_delay_note) {
+    card.appendChild(el("p", { className: "source-note", textContent: target.quote_delay_note }));
+  }
+  const passbookNode = renderPassbookEstimate(target);
+  if (passbookNode) card.appendChild(passbookNode);
+  const scoreNode = renderTechnicalScore(target);
+  if (scoreNode) card.appendChild(scoreNode);
+  const aiSummaryNode = renderAiSummary(target);
+  if (aiSummaryNode) card.appendChild(aiSummaryNode);
+  card.appendChild(renderDisciplineCard(target));
+  const grid = el("div", { className: "indicator-grid" });
+  const signals = target.indicators.stage_signals;
+  grid.appendChild(indicatorCard("rsi14", "RSI14", fmt(target.indicators.rsi14, 2), signals ? signalBadgeParagraph("止跌判斷（RSI回升+近3天無新低）", signals.momentum_stabilizing) : null));
+  grid.appendChild(indicatorCard("bollinger", "布林通道", fmt(target.indicators.bollinger.lower, 2) + " ~ " + fmt(target.indicators.bollinger.upper, 2)));
+  const vs = target.indicators.volatility_squeeze;
+  const vsText = vs.ratio === null ? "資料不足" : fmt(vs.ratio, 2) + (vs.is_compressed ? "（壓縮中）" : "");
+  grid.appendChild(indicatorCard("volatility_squeeze", "波動壓縮比", vsText));
+  const rp = target.indicators.relative_position;
+  const rpText = rp === null ? "資料不足" : fmt(rp.position * 100, 0) + "%（" + rp.label + "）";
+  grid.appendChild(indicatorCard("relative_position", "區間位置", rpText, renderPositionGauge(rp)));
+  grid.appendChild(indicatorCard("ma20", "MA20", fmt(target.indicators.ma20, 2), signals ? signalBadgeParagraph("趨勢沒壞判斷（站上MA20+未破前低）", signals.trend_intact) : null));
+  grid.appendChild(indicatorCard("macd", "MACD", fmt(target.indicators.macd.macd, 4) + " / 訊號線 " + fmt(target.indicators.macd.signal, 4), signals ? signalBadgeParagraph("重新轉強判斷（MACD黃金交叉）", signals.macd_golden_cross) : null));
+  card.appendChild(grid);
+  if (target.chart && target.chart.length > 1) {
+    card.appendChild(el("p", { textContent: "近 " + target.chart.length + " 個交易日走勢：" }));
+    card.appendChild(renderSparkline(target.chart, "#b45309"));
+  }
+  card.appendChild(el("p", { className: "source-note", textContent: "資料來源：" + target.data_source.name + "，最後更新 " + target.data_source.as_of }));
+  updateTabActiveState();
+}
+
+function renderMacro() {
+  const macro = SITE_DATA.macro_context;
+  const card = document.getElementById("macro-card");
+  card.innerHTML = "";
+  card.appendChild(el("h2", { textContent: "總體背景參考" }));
+  card.appendChild(el("p", { textContent: macro.note }));
+  card.appendChild(el("p", { textContent: "背景脈絡：美元走弱、實質利率走低、避險情緒升溫，通常對金價有利；但這只是歷史上常見的關聯性，不是保證，也不是進出場訊號。" }));
+  if (macro.stale) {
+    card.appendChild(el("p", { className: "source-note", textContent: "⚠ 資料暫時無法取得，顯示上次成功抓取的結果。" }));
+  }
+  const fxPoints = macro.usdtwd;
+  if (fxPoints.length > 0) {
+    const latestFx = fxPoints[fxPoints.length - 1];
+    card.appendChild(el("p", { textContent: "USD/TWD：" + fmt(latestFx.close, 3) + "（" + latestFx.date + "）" }));
+    if (fxPoints.length > 1) card.appendChild(renderSparkline(fxPoints, "#2563eb"));
+  }
+  const div = macro.divergence;
+  if (div && div.checked_days > 0) {
+    const divLabel = div.is_divergent ? "⚠ 背離：近期同向天數偏多" : "正常反向關係";
+    const divBadgeClass = div.is_divergent ? "badge badge-warn" : "badge badge-ok";
+    const divP = el("p", {});
+    divP.appendChild(document.createTextNode("金價與美元關係："));
+    divP.appendChild(el("span", { className: divBadgeClass, textContent: divLabel }));
+    card.appendChild(divP);
+    card.appendChild(el("p", { className: "source-note", textContent: "近 " + div.checked_days + " 個有效交易日中，有 " + div.same_direction_days + " 天金價與美元同向變動（正常應多為反向）。" }));
+  }
+  card.appendChild(el("p", { className: "source-note", textContent: "資料來源：" + macro.data_source.name + "，最後更新 " + macro.data_source.as_of }));
+}
+
+function refreshSiteData() {
+  fetch("data/gold_site.json?ts=" + Date.now())
+    .then((res) => (res.ok ? res.json() : null))
+    .then((fresh) => {
+      if (!fresh) return;
+      Object.assign(SITE_DATA, fresh);
+      renderDisclaimer();
+      renderTargetTabs();
+      renderTarget(currentTargetCode || Object.keys(SITE_DATA.targets)[0]);
+      renderMacro();
+      markPageUpdatedNow();
+    })
+    .catch(() => {});
+}
+
+function refreshLiveQuotes() {
+  fetch("data/live_quotes.json?ts=" + Date.now())
+    .then((res) => (res.ok ? res.json() : null))
+    .then((fresh) => {
+      if (!fresh || !fresh.quotes) return;
+      let changed = false;
+      Object.keys(fresh.quotes).forEach((code) => {
+        const target = SITE_DATA.targets[code];
+        if (target) {
+          Object.assign(target.latest, fresh.quotes[code]);
+          changed = true;
+        }
+      });
+      if (changed && currentTargetCode) renderTarget(currentTargetCode);
+      markPageUpdatedNow();
+    })
+    .catch(() => {});
+}
+
+renderDisclaimer();
+renderTargetTabs();
+renderTarget(Object.keys(SITE_DATA.targets)[0]);
+renderMacro();
+markPageUpdatedNow();
+if (SITE_DATA.auto_refresh_seconds) {
+  setInterval(refreshSiteData, SITE_DATA.auto_refresh_seconds * 1000);
+}
+if (SITE_DATA.live_refresh_seconds) {
+  setInterval(refreshLiveQuotes, SITE_DATA.live_refresh_seconds * 1000);
+}
+</script>
+</body>
+</html>
