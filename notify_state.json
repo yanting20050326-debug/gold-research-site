@@ -1,4 +1,8 @@
 {
+  "GCF": {
+    "stage": "加碼 20%（前提：趨勢沒壞）",
+    "broke_prior_low": false
+  },
   "00635U": {
     "stage": "加碼 20%（前提：出現止跌）",
     "broke_prior_low": true
@@ -6,9 +10,5 @@
   "00708L": {
     "stage": "加碼 20%（前提：出現止跌）",
     "broke_prior_low": true
-  },
-  "GCF": {
-    "stage": "加碼 20%（前提：趨勢沒壞）",
-    "broke_prior_low": false
   }
 }
