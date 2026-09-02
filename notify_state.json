@@ -8,7 +8,7 @@
     "broke_prior_low": true
   },
   "GCF": {
-    "stage": "加碼 20%（前提：出現止跌）",
+    "stage": "加碼 20%（前提：趨勢沒壞）",
     "broke_prior_low": false
   }
 }
