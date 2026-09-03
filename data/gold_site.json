@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T11:05:33.875647+00:00",
+  "generated_at": "2026-09-03T11:10:37.625671+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -18,9 +18,9 @@
       },
       "latest": {
         "trading_date": "2026-09-03",
-        "close": 4474.2001953125,
+        "close": 4473.2998046875,
         "volume": null,
-        "quote_time": "2026-09-03 10:55",
+        "quote_time": "2026-09-03 11:00",
         "is_realtime": true
       },
       "indicators": {
@@ -592,25 +592,25 @@
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4560.440806806567,
+        "latest_price": 4556.269285964065,
         "relative_position": {
-          "position": 0.6941152641029693,
+          "position": 0.6873197552245374,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4748.212550472091,
-          "pullback_pct": 3.954577468248651,
-          "stage": "第一筆 20%",
-          "hint": "符合第一筆進場條件，可考慮分批的第一筆 20%"
+          "pullback_pct": 4.042432019791154,
+          "stage": "加碼 20%（前提：趨勢沒壞）",
+          "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 45.75333697182287,
-            "bollinger": 42.20934350824327,
-            "ma20": 44.79774905012573,
-            "macd": 34.30376595417736
+            "rsi14": 45.951499854050645,
+            "bollinger": 42.86383951175113,
+            "ma20": 45.236541008527254,
+            "macd": 34.36243099550205
           },
-          "composite": 41.76604887109231,
+          "composite": 42.10357784245777,
           "label": "技術面中性"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
@@ -1664,15 +1664,15 @@
       },
       {
         "date": "2026-09-03",
-        "close": 31.702999114990234
+        "close": 31.673999786376953
       }
     ],
     "stale": false,
     "note": "總體背景參考，非本頁技術指標，僅供市場情緒判讀。",
     "divergence": {
-      "same_direction_days": 3,
+      "same_direction_days": 2,
       "checked_days": 5,
-      "is_divergent": true
+      "is_divergent": false
     }
   }
 }
