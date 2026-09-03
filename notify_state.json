@@ -1,7 +1,7 @@
 {
   "00635U": {
     "stage": "加碼 20%（前提：出現止跌）",
-    "broke_prior_low": true
+    "broke_prior_low": false
   },
   "00708L": {
     "stage": "加碼 20%（前提：出現止跌）",
