@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T04:45:35.276625+00:00",
+  "generated_at": "2026-09-03T04:50:34.714409+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-02",
-        "close": 45.845,
+        "close": 45.85,
         "volume": 6993874,
-        "quote_time": "12:45:20",
+        "quote_time": "12:49:59",
         "is_realtime": true
       },
       "indicators": {
@@ -268,9 +268,9 @@
       },
       "latest": {
         "trading_date": "2026-09-02",
-        "close": 82.475,
+        "close": 82.42500000000001,
         "volume": 10461068,
-        "quote_time": "12:45:21",
+        "quote_time": "12:50:06",
         "is_realtime": true
       },
       "indicators": {
@@ -520,9 +520,9 @@
       },
       "latest": {
         "trading_date": "2026-09-03",
-        "close": 4482.2998046875,
+        "close": 4482.2001953125,
         "volume": null,
-        "quote_time": "2026-09-03 04:35",
+        "quote_time": "2026-09-03 04:40",
         "is_realtime": true
       },
       "indicators": {
@@ -1094,25 +1094,25 @@
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4569.273207108506,
+        "latest_price": 4569.128902118387,
         "relative_position": {
-          "position": 0.7085034589450427,
+          "position": 0.7082683826075198,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4748.212550472091,
-          "pullback_pct": 3.768562200228253,
+          "pullback_pct": 3.7716013436656017,
           "stage": "第一筆 20%",
           "hint": "符合第一筆進場條件，可考慮分批的第一筆 20%"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 45.33935419342252,
-            "bollinger": 40.82645119035075,
-            "ma20": 43.86882453470019,
-            "macd": 34.1799074118037
+            "rsi14": 45.346057693863706,
+            "bollinger": 40.84901109821219,
+            "ma20": 43.88399997263811,
+            "macd": 34.181927182109376
           },
-          "composite": 41.05363433256929,
+          "composite": 41.065248986705846,
           "label": "技術面中性"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
@@ -1656,7 +1656,7 @@
       },
       {
         "date": "2026-09-03",
-        "close": 31.707000732421875
+        "close": 31.70599937438965
       }
     ],
     "stale": false,
