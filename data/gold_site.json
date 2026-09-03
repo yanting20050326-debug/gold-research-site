@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-03T22:10:33.016160+00:00",
+  "generated_at": "2026-09-03T22:15:33.088632+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -20,7 +20,7 @@
         "trading_date": "2026-09-03",
         "close": 4523.5,
         "volume": null,
-        "quote_time": "2026-09-03 22:00",
+        "quote_time": "2026-09-03 22:05",
         "is_realtime": true
       },
       "indicators": {
