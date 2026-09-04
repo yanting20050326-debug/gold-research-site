@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-04T04:00:34.919497+00:00",
+  "generated_at": "2026-09-04T04:05:35.693585+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-03",
-        "close": 46.135000000000005,
+        "close": 46.144999999999996,
         "volume": 4041771,
-        "quote_time": "11:59:54",
+        "quote_time": "12:05:08",
         "is_realtime": true
       },
       "indicators": {
@@ -272,9 +272,9 @@
       },
       "latest": {
         "trading_date": "2026-09-03",
-        "close": 83.45,
+        "close": 83.42500000000001,
         "volume": 6396113,
-        "quote_time": "12:00:13",
+        "quote_time": "12:05:02",
         "is_realtime": true
       },
       "indicators": {
@@ -524,43 +524,43 @@
       "quote_delay_note": "Yahoo Finance 免費期貨資料通常延遲約 10 分鐘，此標的的即時價格不會比這個延遲更即時，跟 TWSE 標的的近乎即時報價不同。",
       "data_source": {
         "name": "Yahoo Finance (GC=F)",
-        "as_of": "2026-09-03"
+        "as_of": "2026-09-02"
       },
       "latest": {
-        "trading_date": "2026-09-03",
-        "close": 4491.7001953125,
+        "trading_date": "2026-09-02",
+        "close": 4366.2998046875,
         "volume": null,
         "quote_time": null,
         "is_realtime": false
       },
       "indicators": {
-        "ma20": 4462.7,
-        "rsi14": 56.83519701991241,
+        "ma20": 4450.214990234375,
+        "rsi14": 48.501516224933454,
         "bollinger": {
-          "upper": 4671.931012402237,
-          "middle": 4462.7,
-          "lower": 4253.468987597763
+          "upper": 4679.839924441969,
+          "middle": 4450.214990234375,
+          "lower": 4220.590056026782
         },
         "macd": {
-          "macd": 63.150989715913965,
-          "signal": 85.51979454545551,
-          "histogram": -22.368804829541546
+          "macd": 65.03761961511555,
+          "signal": 91.1119957528409,
+          "histogram": -26.074376137725352
         },
         "volatility_squeeze": {
-          "short_vol": 0.019978698306372892,
-          "long_vol": 0.014824030562523953,
-          "ratio": 1.347723766630666,
+          "short_vol": 0.012480783636285693,
+          "long_vol": 0.013607469305656705,
+          "ratio": 0.9172009398615625,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.7544067775480651,
+          "position": 0.5478503274042791,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4640.7998046875,
-          "pullback_pct": 3.2127998545509335,
-          "stage": "第一筆 20%",
-          "hint": "符合第一筆進場條件，可考慮分批的第一筆 20%"
+          "pullback_pct": 5.914928709545663,
+          "stage": "加碼 20%（前提：趨勢沒壞）",
+          "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
         },
         "prior_low": {
           "price": 4033.699951171875,
@@ -568,17 +568,17 @@
         },
         "technical_score": {
           "scores": {
-            "rsi14": 43.16480298008759,
-            "bollinger": 43.06981432161007,
-            "ma20": 46.750824017691066,
-            "macd": 35.9405154017586
+            "rsi14": 51.498483775066546,
+            "bollinger": 68.27222854444271,
+            "ma20": 59.42821703344897,
+            "macd": 35.10463721586559
           },
-          "composite": 42.23148918028683,
+          "composite": 53.57589164220595,
           "label": "技術面中性"
         },
         "stage_signals": {
-          "trend_intact": true,
-          "momentum_stabilizing": true,
+          "trend_intact": false,
+          "momentum_stabilizing": false,
           "macd_golden_cross": false
         }
       },
@@ -1090,10 +1090,6 @@
         {
           "trading_date": "2026-09-02",
           "close": 4366.2998046875
-        },
-        {
-          "trading_date": "2026-09-03",
-          "close": 4491.7001953125
         }
       ],
       "passbook": {
@@ -1660,7 +1656,7 @@
       },
       {
         "date": "2026-09-04",
-        "close": 31.70199966430664
+        "close": 31.701000213623047
       }
     ],
     "stale": false,
