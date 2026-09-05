@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T00:20:35.589799+00:00",
+  "generated_at": "2026-09-05T00:25:33.984088+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -592,25 +592,25 @@
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4548.672445512308,
+        "latest_price": 4577.180755551391,
         "relative_position": {
-          "position": 0.6749443174197052,
+          "position": 0.7213850476219494,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4748.212550472091,
-          "pullback_pct": 4.202425709437625,
-          "stage": "加碼 20%（前提：趨勢沒壞）",
-          "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
+          "pullback_pct": 3.6020248272941218,
+          "stage": "第一筆 20%",
+          "hint": "符合第一筆進場條件，可考慮分批的第一筆 20%"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 46.335774720334776,
-            "bollinger": 48.37464739526607,
-            "ma20": 49.139004355016304,
-            "macd": 37.54594523467249
+            "rsi14": 44.550063666111654,
+            "bollinger": 40.4899812333944,
+            "ma20": 44.06485276635479,
+            "macd": 36.64210607726176
           },
-          "composite": 45.348842926322405,
+          "composite": 41.43675093578065,
           "label": "技術面中性"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
@@ -1139,7 +1139,7 @@
   "macro_context": {
     "data_source": {
       "name": "Yahoo Finance",
-      "as_of": "2026-09-04"
+      "as_of": "2026-09-05"
     },
     "usdtwd": [
       {
@@ -1675,16 +1675,16 @@
         "close": 31.69540023803711
       },
       {
-        "date": "2026-09-04",
-        "close": 31.600000381469727
+        "date": "2026-09-05",
+        "close": 31.6200008392334
       }
     ],
     "stale": false,
     "note": "總體背景參考，非本頁技術指標，僅供市場情緒判讀。",
     "divergence": {
-      "same_direction_days": 3,
+      "same_direction_days": 2,
       "checked_days": 5,
-      "is_divergent": true
+      "is_divergent": false
     }
   }
 }
