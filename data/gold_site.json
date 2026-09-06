@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T15:40:32.509422+00:00",
+  "generated_at": "2026-09-06T15:45:32.080409+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -18,39 +18,39 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 4476.60009765625,
+        "close": 4429.7998046875,
         "volume": null,
         "quote_time": null,
         "is_realtime": false
       },
       "indicators": {
-        "ma20": 4469.4949951171875,
-        "rsi14": 55.66502127920458,
+        "ma20": 4467.15498046875,
+        "rsi14": 52.331413292987165,
         "bollinger": {
-          "upper": 4671.12530233936,
-          "middle": 4469.4949951171875,
-          "lower": 4267.864687895015
+          "upper": 4669.486202104265,
+          "middle": 4467.15498046875,
+          "lower": 4264.823758833235
         },
         "macd": {
-          "macd": 59.75692155816887,
-          "signal": 80.37776167424046,
-          "histogram": -20.62084011607159
+          "macd": 56.02356485410928,
+          "signal": 79.63109033342855,
+          "histogram": -23.607525479319264
         },
         "volatility_squeeze": {
-          "short_vol": 0.01622158560767185,
-          "long_vol": 0.01412068727463113,
-          "ratio": 1.14878159201324,
+          "short_vol": 0.017169316402726106,
+          "long_vol": 0.014483234879805833,
+          "ratio": 1.1854614349081303,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.7295342667595884,
+          "position": 0.6524459711559303,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4640.7998046875,
-          "pullback_pct": 3.5381769078984613,
-          "stage": "第一筆 20%",
-          "hint": "符合第一筆進場條件，可考慮分批的第一筆 20%"
+          "pullback_pct": 4.5466300827473045,
+          "stage": "加碼 20%（前提：趨勢沒壞）",
+          "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
         },
         "prior_low": {
           "price": 4033.699951171875,
@@ -58,16 +58,16 @@
         },
         "technical_score": {
           "scores": {
-            "rsi14": 44.33497872079542,
-            "bollinger": 48.23808666540553,
-            "ma20": 49.205156002319654,
-            "macd": 36.65127099705534
+            "rsi14": 47.668586707012835,
+            "bollinger": 59.23119414771853,
+            "ma20": 54.18109243406308,
+            "macd": 37.353025571307626
           },
-          "composite": 44.607373096393985,
+          "composite": 49.60847471502552,
           "label": "技術面中性"
         },
         "stage_signals": {
-          "trend_intact": true,
+          "trend_intact": false,
           "momentum_stabilizing": true,
           "macd_golden_cross": false
         }
@@ -579,7 +579,7 @@
         },
         {
           "trading_date": "2026-09-04",
-          "close": 4476.60009765625
+          "close": 4429.7998046875
         }
       ],
       "passbook": {
