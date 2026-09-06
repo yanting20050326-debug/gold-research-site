@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-06T03:55:29.938895+00:00",
+  "generated_at": "2026-09-06T04:00:31.087481+00:00",
   "quotes": {
     "00635U": {
       "close": 46.21,
@@ -9,11 +9,6 @@
     "00708L": {
       "close": 83.55,
       "quote_time": "13:30:00",
-      "is_realtime": true
-    },
-    "GCF": {
-      "close": 4476.60009765625,
-      "quote_time": "2026-09-04 20:59",
       "is_realtime": true
     }
   }
