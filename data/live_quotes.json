@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-07T02:26:07.337514+00:00",
+  "generated_at": "2026-09-07T02:31:16.223356+00:00",
   "quotes": {
     "00635U": {
-      "close": 45.565,
-      "quote_time": "10:25:57",
+      "close": 45.545,
+      "quote_time": "10:29:59",
       "is_realtime": true
     },
     "00708L": {
-      "close": 81.275,
-      "quote_time": "10:25:59",
+      "close": 81.225,
+      "quote_time": "10:30:44",
       "is_realtime": true
     }
   }
