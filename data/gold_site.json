@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T00:50:34.946924+00:00",
+  "generated_at": "2026-09-07T00:55:35.307546+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 45.92,
+        "close": 45.835,
         "volume": 2939587,
-        "quote_time": "08:50:22",
+        "quote_time": "08:55:38",
         "is_realtime": true
       },
       "indicators": {
@@ -276,9 +276,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 81.925,
+        "close": 81.92500000000001,
         "volume": 4938548,
-        "quote_time": "08:50:33",
+        "quote_time": "08:55:09",
         "is_realtime": true
       },
       "indicators": {
