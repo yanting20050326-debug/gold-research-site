@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T04:46:13.370792+00:00",
+  "generated_at": "2026-09-07T04:51:20.687548+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 45.45,
+        "close": 45.435,
         "volume": 2939587,
-        "quote_time": "12:46:04",
+        "quote_time": "12:50:08",
         "is_realtime": true
       },
       "indicators": {
@@ -261,7 +261,10 @@
           "close": 46.21
         }
       ],
-      "ai_summary": null
+      "ai_summary": {
+        "text": "今日元大S&P黃金上漲0.98%，主要受惠於國際金價上揚1.06%，反映市場對黃金的避險或資產配置需求有所提升。雖然美元兌新臺幣下跌0.29%（台幣升值）帶來些微的匯兌逆風，抵銷了部分漲幅，但在技術面維持中性的狀態下，該標的仍隨國際金價展現出相當平穩的跟漲走勢。",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      }
     },
     "00708L": {
       "code": "00708L",
@@ -276,9 +279,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 80.775,
+        "close": 80.75,
         "volume": 4938548,
-        "quote_time": "12:46:09",
+        "quote_time": "12:50:33",
         "is_realtime": true
       },
       "indicators": {
