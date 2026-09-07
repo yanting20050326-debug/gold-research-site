@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T00:40:32.899545+00:00",
+  "generated_at": "2026-09-07T00:45:34.805307+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 45.95,
+        "close": 46.05,
         "volume": 2939587,
-        "quote_time": "08:40:05",
+        "quote_time": "08:43:31",
         "is_realtime": true
       },
       "indicators": {
@@ -276,9 +276,9 @@
       },
       "latest": {
         "trading_date": "2026-09-04",
-        "close": 82.7,
+        "close": 82.025,
         "volume": 4938548,
-        "quote_time": "08:39:56",
+        "quote_time": "08:44:42",
         "is_realtime": true
       },
       "indicators": {
@@ -520,7 +520,10 @@
           "close": 83.55
         }
       ],
-      "ai_summary": null
+      "ai_summary": {
+        "text": "今日國際金價上漲 1.06%，顯著帶動具槓桿效果的期元大S&P黃金正2 向上衝高。雖然美元兌台幣走弱（-0.24%）對以台幣計價的資產帶來些許匯損壓抑，但在技術面呈中性、未見過熱阻力下，ETF 最終仍受金價主導大幅收漲 1.83%。",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      }
     },
     "GCF": {
       "code": "GCF",
