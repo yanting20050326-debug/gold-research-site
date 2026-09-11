@@ -1,99 +1,9 @@
 {
-  "generated_at": "2026-09-11T06:01:04.701191+00:00",
+  "generated_at": "2026-09-11T07:00:51.370872+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
   "targets": {
-    "00635U": {
-      "code": "00635U",
-      "display_name": "元大S&P黃金",
-      "asset_class": "commodity_futures_etf",
-      "asset_class_note": "商品期貨型ETF，追蹤COMEX黃金期貨，受美元、實質利率、避險情緒、通膨預期影響，不是公司基本面驅動；沒有槓桿，長期持有不會有槓桿耗損，但期貨轉倉遇到正價差時會有小幅轉倉成本，長期報酬可能略遜於現貨金價；MA/RSI/布林/MACD 是通用技術工具，解讀方式跟股票型ETF不同。",
-      "badge": "商品／避險資產，非股票型ETF",
-      "pullback_scale": 1.0,
-      "data_source": {
-        "name": "TWSE STOCK_DAY",
-        "as_of": "2026-09-11"
-      },
-      "latest": {
-        "trading_date": "2026-09-11",
-        "close": 44.76,
-        "volume": 5836000,
-        "quote_time": null,
-        "is_realtime": false
-      },
-      "indicators": {
-        "ma20": null,
-        "rsi14": null,
-        "bollinger": {
-          "upper": null,
-          "middle": null,
-          "lower": null
-        },
-        "macd": {
-          "macd": null,
-          "signal": null,
-          "histogram": null
-        },
-        "volatility_squeeze": {
-          "short_vol": null,
-          "long_vol": null,
-          "ratio": null,
-          "is_compressed": false
-        },
-        "relative_position": null,
-        "pullback_stage": null,
-        "prior_low": null,
-        "technical_score": null,
-        "stage_signals": {
-          "trend_intact": null,
-          "momentum_stabilizing": null,
-          "macd_golden_cross": null
-        }
-      },
-      "chart": [
-        {
-          "trading_date": "2026-09-01",
-          "close": 45.8
-        },
-        {
-          "trading_date": "2026-09-02",
-          "close": 44.59
-        },
-        {
-          "trading_date": "2026-09-03",
-          "close": 45.76
-        },
-        {
-          "trading_date": "2026-09-04",
-          "close": 46.21
-        },
-        {
-          "trading_date": "2026-09-07",
-          "close": 45.57
-        },
-        {
-          "trading_date": "2026-09-08",
-          "close": 45.69
-        },
-        {
-          "trading_date": "2026-09-09",
-          "close": 45.3
-        },
-        {
-          "trading_date": "2026-09-10",
-          "close": 45.56
-        },
-        {
-          "trading_date": "2026-09-11",
-          "close": 44.76
-        }
-      ],
-      "ai_summary": {
-        "text": "今日國際金價小幅上漲0.47%且美元兌台幣升值0.69%，理論上應對台幣計價的黃金資產構成支撐，但元大S&P黃金卻逆勢下跌1.76%。此種走勢顯著背離的情況，推測可能是由於該ETF先前累積了較高溢價而在今日進行折溢價收斂修正，或是國內次級市場出現較強烈的獲利了結與籌碼調節賣壓所致。",
-        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
-      }
-    },
     "GCF": {
       "code": "GCF",
       "display_name": "國際盤黃金（COMEX）",
@@ -108,37 +18,37 @@
       },
       "latest": {
         "trading_date": "2026-09-11",
-        "close": 4385.10009765625,
+        "close": 4392.2998046875,
         "volume": null,
-        "quote_time": "2026-09-11 05:51",
+        "quote_time": "2026-09-11 06:50",
         "is_realtime": true
       },
       "indicators": {
-        "ma20": 4469.264990234375,
-        "rsi14": 49.2933413983522,
+        "ma20": 4469.624975585937,
+        "rsi14": 49.81159418412106,
         "bollinger": {
-          "upper": 4668.039092693118,
-          "middle": 4469.264990234375,
-          "lower": 4270.490887775632
+          "upper": 4667.8132890132965,
+          "middle": 4469.624975585937,
+          "lower": 4271.436662158578
         },
         "macd": {
-          "macd": 25.932651256561257,
-          "signal": 52.97885208995119,
-          "histogram": -27.046200833389932
+          "macd": 26.506986860193138,
+          "signal": 53.09371921067756,
+          "histogram": -26.586732350484425
         },
         "volatility_squeeze": {
-          "short_vol": 0.008073539031480807,
-          "long_vol": 0.014627806366557057,
-          "ratio": 0.5519309477557074,
+          "short_vol": 0.008477758043523414,
+          "long_vol": 0.014656822225354787,
+          "ratio": 0.5784171980238506,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.5788177092276814,
+          "position": 0.5906768902002307,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4640.7998046875,
-          "pullback_pct": 5.509819811080349,
+          "pullback_pct": 5.354680452903815,
           "stage": "加碼 20%（前提：趨勢沒壞）",
           "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
         },
@@ -148,12 +58,12 @@
         },
         "technical_score": {
           "scores": {
-            "rsi14": 50.7066586016478,
-            "bollinger": 71.17099047034904,
-            "ma20": 59.415965797735225,
-            "macd": 44.086189441736636
+            "rsi14": 50.18840581587894,
+            "bollinger": 69.50800467525514,
+            "ma20": 58.65007369978511,
+            "macd": 43.965123502748
           },
-          "composite": 56.34495107786718,
+          "composite": 55.577901923416796,
           "label": "技術面中性"
         },
         "stage_signals": {
@@ -673,35 +583,128 @@
         },
         {
           "trading_date": "2026-09-11",
-          "close": 4385.10009765625
+          "close": 4392.2998046875
         }
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4466.380826981257,
+        "latest_price": 4465.382255832756,
         "relative_position": {
-          "position": 0.4893964763055209,
+          "position": 0.4875873331020196,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4748.212550472091,
-          "pullback_pct": 5.935533013635047,
+          "pullback_pct": 5.956563478002153,
           "stage": "加碼 20%（前提：趨勢沒壞）",
           "hint": "符合加碼條件，若趨勢未壞可加碼 20%"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 50.82321490221326,
-            "bollinger": 70.05398741380309,
-            "ma20": 59.09162837382311,
-            "macd": 42.715322877606035
+            "rsi14": 50.87988761541068,
+            "bollinger": 70.27605731744092,
+            "ma20": 59.19599640732066,
+            "macd": 42.73153287369774
           },
-          "composite": 55.67103839186137,
+          "composite": 55.7708685534675,
           "label": "技術面中性"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
       },
-      "ai_summary": null
+      "ai_summary": {
+        "text": "今日國際金價與 COMEX 黃金同步上揚 0.64%，在技術面維持中性姿態下，顯示此波漲幅主要由市場避險情緒增溫或宏觀資金流入等基本面因素所帶動。儘管美元兌台幣同時走升 0.50% 顯示美元相對偏強，黃金依然展現抗壓性逆勢走高，反映出當前市場對黃金的實質買盤需求十分強勁，有效抵銷了匯率面的潛在壓力。",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      }
+    },
+    "00635U": {
+      "code": "00635U",
+      "display_name": "元大S&P黃金",
+      "asset_class": "commodity_futures_etf",
+      "asset_class_note": "商品期貨型ETF，追蹤COMEX黃金期貨，受美元、實質利率、避險情緒、通膨預期影響，不是公司基本面驅動；沒有槓桿，長期持有不會有槓桿耗損，但期貨轉倉遇到正價差時會有小幅轉倉成本，長期報酬可能略遜於現貨金價；MA/RSI/布林/MACD 是通用技術工具，解讀方式跟股票型ETF不同。",
+      "badge": "商品／避險資產，非股票型ETF",
+      "pullback_scale": 1.0,
+      "data_source": {
+        "name": "TWSE STOCK_DAY",
+        "as_of": "2026-09-11"
+      },
+      "latest": {
+        "trading_date": "2026-09-11",
+        "close": 44.76,
+        "volume": 5836000,
+        "quote_time": null,
+        "is_realtime": false
+      },
+      "indicators": {
+        "ma20": null,
+        "rsi14": null,
+        "bollinger": {
+          "upper": null,
+          "middle": null,
+          "lower": null
+        },
+        "macd": {
+          "macd": null,
+          "signal": null,
+          "histogram": null
+        },
+        "volatility_squeeze": {
+          "short_vol": null,
+          "long_vol": null,
+          "ratio": null,
+          "is_compressed": false
+        },
+        "relative_position": null,
+        "pullback_stage": null,
+        "prior_low": null,
+        "technical_score": null,
+        "stage_signals": {
+          "trend_intact": null,
+          "momentum_stabilizing": null,
+          "macd_golden_cross": null
+        }
+      },
+      "chart": [
+        {
+          "trading_date": "2026-09-01",
+          "close": 45.8
+        },
+        {
+          "trading_date": "2026-09-02",
+          "close": 44.59
+        },
+        {
+          "trading_date": "2026-09-03",
+          "close": 45.76
+        },
+        {
+          "trading_date": "2026-09-04",
+          "close": 46.21
+        },
+        {
+          "trading_date": "2026-09-07",
+          "close": 45.57
+        },
+        {
+          "trading_date": "2026-09-08",
+          "close": 45.69
+        },
+        {
+          "trading_date": "2026-09-09",
+          "close": 45.3
+        },
+        {
+          "trading_date": "2026-09-10",
+          "close": 45.56
+        },
+        {
+          "trading_date": "2026-09-11",
+          "close": 44.76
+        }
+      ],
+      "ai_summary": {
+        "text": "今日國際金價小幅上漲0.47%且美元兌台幣升值0.69%，理論上應對台幣計價的黃金資產構成支撐，但元大S&P黃金卻逆勢下跌1.76%。此種走勢顯著背離的情況，推測可能是由於該ETF先前累積了較高溢價而在今日進行折溢價收斂修正，或是國內次級市場出現較強烈的獲利了結與籌碼調節賣壓所致。",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      }
     },
     "00708L": {
       "code": "00708L",
@@ -1515,7 +1518,7 @@
       },
       {
         "date": "2026-09-11",
-        "close": 31.68000030517578
+        "close": 31.621000289916992
       }
     ],
     "stale": false,
