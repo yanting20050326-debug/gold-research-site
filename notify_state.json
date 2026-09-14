@@ -9,6 +9,6 @@
   },
   "GCF": {
     "stage": "加碼 20%（前提：趨勢沒壞）",
-    "broke_prior_low": false
+    "broke_prior_low": true
   }
 }
