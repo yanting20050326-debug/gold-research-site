@@ -1,7 +1,7 @@
 {
   "GCF": {
     "stage": "加碼 20%（前提：趨勢沒壞）",
-    "broke_prior_low": true
+    "broke_prior_low": false
   },
   "00635U": {
     "stage": "加碼 20%（前提：出現止跌）",
