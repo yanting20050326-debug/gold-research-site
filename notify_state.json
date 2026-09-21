@@ -1,4 +1,8 @@
 {
+  "GCF": {
+    "stage": "加碼 20%（前提：出現止跌）",
+    "prior_low_price": 4332.7998046875
+  },
   "00635U": {
     "stage": "加碼 20%（前提：出現止跌）",
     "prior_low_price": null
@@ -6,9 +10,5 @@
   "00708L": {
     "stage": "加碼 20%（前提：出現止跌）",
     "prior_low_price": null
-  },
-  "GCF": {
-    "stage": "加碼 20%（前提：出現止跌）",
-    "prior_low_price": 4332.7998046875
   }
 }
