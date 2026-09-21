@@ -8,7 +8,7 @@
     "prior_low_price": null
   },
   "GCF": {
-    "stage": "加碼 20%（前提：出現止跌）",
+    "stage": "加碼 20%（前提：趨勢沒壞）",
     "prior_low_price": 4332.7998046875
   }
 }
