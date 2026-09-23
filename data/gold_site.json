@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T04:05:39.610587+00:00",
+  "generated_at": "2026-09-23T04:10:40.406804+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-09-22",
-        "close": 44.735,
+        "close": 44.74,
         "volume": 2738395,
-        "quote_time": "12:04:57",
+        "quote_time": "12:09:53",
         "is_realtime": true
       },
       "indicators": {
@@ -236,9 +236,9 @@
       },
       "latest": {
         "trading_date": "2026-09-22",
-        "close": 78.42500000000001,
+        "close": 78.475,
         "volume": 3942947,
-        "quote_time": "12:05:08",
+        "quote_time": "12:09:58",
         "is_realtime": true
       },
       "indicators": {
@@ -452,56 +452,56 @@
       "quote_delay_note": "Yahoo Finance 免費期貨資料通常延遲約 10 分鐘，此標的的即時價格不會比這個延遲更即時，跟 TWSE 標的的近乎即時報價不同。",
       "data_source": {
         "name": "Yahoo Finance (GC=F)",
-        "as_of": "2026-09-22"
+        "as_of": "2026-09-23"
       },
       "latest": {
-        "trading_date": "2026-09-22",
-        "close": 4376.39990234375,
+        "trading_date": "2026-09-23",
+        "close": 4380.2998046875,
         "volume": null,
-        "quote_time": null,
-        "is_realtime": false
+        "quote_time": "2026-09-23 12:00",
+        "is_realtime": true
       },
       "indicators": {
-        "ma20": 4461.1849609375,
-        "rsi14": 46.32655627744734,
+        "ma20": 4445.4849609375,
+        "rsi14": 46.736262386528246,
         "bollinger": {
-          "upper": 4665.467601176891,
-          "middle": 4461.1849609375,
-          "lower": 4256.90232069811
+          "upper": 4622.007673914969,
+          "middle": 4445.4849609375,
+          "lower": 4268.96224796003
         },
         "macd": {
-          "macd": -7.065337010860276,
-          "signal": 10.395205260049519,
-          "histogram": -17.460542270909794
+          "macd": -8.869706771325582,
+          "signal": 6.542222853774499,
+          "histogram": -15.41192962510008
         },
         "volatility_squeeze": {
-          "short_vol": 0.007322163566639629,
-          "long_vol": 0.01198794861040392,
-          "ratio": 0.6107937066300885,
-          "is_compressed": false
+          "short_vol": 0.005093664141404375,
+          "long_vol": 0.012012138153845893,
+          "ratio": 0.42404308676499447,
+          "is_compressed": true
         },
         "relative_position": {
-          "position": 0.11945232234589041,
+          "position": 0.13068546660958905,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4697.7998046875,
-          "pullback_pct": 6.8414984823971166,
+          "pullback_pct": 6.754221505371428,
           "stage": "加碼 20%（前提：出現止跌）",
           "hint": "符合加碼條件，若已出現止跌可再加碼 20%"
         },
         "prior_low": {
           "price": 4332.7998046875,
-          "days_ago": 5
+          "days_ago": 6
         },
         "technical_score": {
           "scores": {
-            "rsi14": 53.67344372255266,
-            "bollinger": 70.75190003771107,
-            "ma20": 59.50252672060621,
-            "macd": 51.61441759631621
+            "rsi14": 53.263737613471754,
+            "bollinger": 68.40696866748078,
+            "ma20": 57.30909692739069,
+            "macd": 52.024816064678824
           },
-          "composite": 58.88557201929654,
+          "composite": 57.751154818255515,
           "label": "技術面中性"
         },
         "stage_signals": {
@@ -1018,29 +1018,33 @@
         {
           "trading_date": "2026-09-22",
           "close": 4376.39990234375
+        },
+        {
+          "trading_date": "2026-09-23",
+          "close": 4380.5
         }
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4473.389498797561,
+        "latest_price": 4466.624714070912,
         "relative_position": {
-          "position": 0.45305260502529476,
+          "position": 0.37791672519594216,
           "label": "區間中段"
         },
         "pullback_stage": {
           "recent_high": 4805.951434609007,
-          "pullback_pct": 6.919793933342197,
+          "pullback_pct": 7.060552424531555,
           "stage": "加碼 20%（前提：出現止跌）",
           "hint": "符合加碼條件，若已出現止跌可再加碼 20%"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 52.26283296783405,
-            "bollinger": 71.8161220371508,
-            "ma20": 61.41156870919147,
-            "macd": 49.40291820984158
+            "rsi14": 52.71582032246024,
+            "bollinger": 71.59668517167655,
+            "ma20": 61.53960298163656,
+            "macd": 50.216878797018204
           },
-          "composite": 58.72336048100448,
+          "composite": 59.01724681819789,
           "label": "技術面中性"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
@@ -1584,15 +1588,15 @@
       },
       {
         "date": "2026-09-23",
-        "close": 31.7189998626709
+        "close": 31.71500015258789
       }
     ],
     "stale": false,
     "note": "總體背景參考，非本頁技術指標，僅供市場情緒判讀。",
     "divergence": {
-      "same_direction_days": 2,
+      "same_direction_days": 3,
       "checked_days": 5,
-      "is_divergent": false
+      "is_divergent": true
     }
   }
 }
