@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T01:01:04.924791+00:00",
+  "generated_at": "2026-10-02T02:00:50.940562+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-10-01",
-        "close": 42.845,
+        "close": 42.745000000000005,
         "volume": 1562005,
-        "quote_time": "09:01:10",
+        "quote_time": "10:00:04",
         "is_realtime": true
       },
       "indicators": {
@@ -239,7 +239,7 @@
         }
       ],
       "ai_summary": {
-        "text": "今日元大S&P黃金微幅收升，主要受惠於美元兌台幣走升帶來的匯率效益，補強了國際金價僅微幅上揚的動能。雖然目前技術面偏冷顯示市場追價意願有限、動能不足，但在台幣貶值與國際金價維持平穩的雙重支撐下，標的展現出略優於國際金價的表現。",
+        "text": "儘管國際金價走低且技術面偏冷反映出市場動能偏弱，但美元兌台幣微幅上升（台幣走弱）為以台幣計價的黃金 ETF 帶來些許匯率補償作用。此外，元大S&P黃金呈現微幅逆勢上漲，推測可能受到國內市場折溢價微調或兩地交易時間差影響。綜合而言，今日標的走勢主要由匯率變動與在地資金面支撐，而非受國際金價直接利多驅動。",
         "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
       }
     },
@@ -256,32 +256,32 @@
       },
       "latest": {
         "trading_date": "2026-10-01",
-        "close": 71.625,
+        "close": 71.475,
         "volume": 2482848,
-        "quote_time": "09:00:25",
+        "quote_time": "09:59:59",
         "is_realtime": true
       },
       "indicators": {
-        "ma20": 82.675,
-        "rsi14": 38.079518277730855,
+        "ma20": 78.1775,
+        "rsi14": 39.74640067865932,
         "bollinger": {
-          "upper": 93.43360121019457,
-          "middle": 82.675,
-          "lower": 71.91639878980543
+          "upper": 84.62152630348449,
+          "middle": 78.1775,
+          "lower": 71.7334736965155
         },
         "macd": {
-          "macd": 2.618505189194366,
-          "signal": 3.6347671812550253,
-          "histogram": -1.0162619920606595
+          "macd": -2.007524539302139,
+          "signal": -1.1238014831280299,
+          "histogram": -0.8837230561741092
         },
         "volatility_squeeze": {
-          "short_vol": 0.04473032355677623,
-          "long_vol": 0.04220713300562792,
-          "ratio": 1.0597811405672086,
+          "short_vol": 0.03295556597652755,
+          "long_vol": 0.02857836040217646,
+          "ratio": 1.1531650351087928,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.14754098360655768,
+          "position": 0.08771929824561409,
           "label": "相對低點區"
         },
         "pullback_stage": {
@@ -290,115 +290,24 @@
           "stage": "最後 40%（等重新轉強）",
           "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
         },
-        "prior_low": {
-          "price": 69.5,
-          "days_ago": 27
-        },
+        "prior_low": null,
         "technical_score": {
           "scores": {
-            "rsi14": 61.920481722269145,
-            "bollinger": 96.59062922836364,
-            "ma20": 100.0,
-            "macd": 13.957258235452642
+            "rsi14": 60.25359932134068,
+            "bollinger": 92.88855864082284,
+            "ma20": 85.35224329250738,
+            "macd": 77.63282228908656
           },
-          "composite": 68.11709229652135,
+          "composite": 79.03180588593936,
           "label": "技術面偏冷"
         },
         "stage_signals": {
-          "trend_intact": false,
+          "trend_intact": null,
           "momentum_stabilizing": false,
           "macd_golden_cross": false
         }
       },
       "chart": [
-        {
-          "trading_date": "2026-07-01",
-          "close": 68.05
-        },
-        {
-          "trading_date": "2026-07-02",
-          "close": 71.0
-        },
-        {
-          "trading_date": "2026-07-03",
-          "close": 75.15
-        },
-        {
-          "trading_date": "2026-07-06",
-          "close": 74.3
-        },
-        {
-          "trading_date": "2026-07-07",
-          "close": 73.3
-        },
-        {
-          "trading_date": "2026-07-08",
-          "close": 73.25
-        },
-        {
-          "trading_date": "2026-07-09",
-          "close": 71.25
-        },
-        {
-          "trading_date": "2026-07-13",
-          "close": 70.9
-        },
-        {
-          "trading_date": "2026-07-14",
-          "close": 69.6
-        },
-        {
-          "trading_date": "2026-07-15",
-          "close": 69.55
-        },
-        {
-          "trading_date": "2026-07-16",
-          "close": 69.65
-        },
-        {
-          "trading_date": "2026-07-17",
-          "close": 67.8
-        },
-        {
-          "trading_date": "2026-07-20",
-          "close": 69.15
-        },
-        {
-          "trading_date": "2026-07-21",
-          "close": 70.5
-        },
-        {
-          "trading_date": "2026-07-22",
-          "close": 73.0
-        },
-        {
-          "trading_date": "2026-07-23",
-          "close": 72.85
-        },
-        {
-          "trading_date": "2026-07-24",
-          "close": 69.5
-        },
-        {
-          "trading_date": "2026-07-27",
-          "close": 71.65
-        },
-        {
-          "trading_date": "2026-07-28",
-          "close": 69.9
-        },
-        {
-          "trading_date": "2026-07-29",
-          "close": 69.6
-        },
-        {
-          "trading_date": "2026-07-30",
-          "close": 69.95
-        },
-        {
-          "trading_date": "2026-07-31",
-          "close": 71.25
-        },
         {
           "trading_date": "2026-08-03",
           "close": 70.45
@@ -484,14 +393,91 @@
           "close": 82.7
         },
         {
+          "trading_date": "2026-09-01",
+          "close": 82.05
+        },
+        {
+          "trading_date": "2026-09-02",
+          "close": 77.85
+        },
+        {
+          "trading_date": "2026-09-03",
+          "close": 82.05
+        },
+        {
+          "trading_date": "2026-09-04",
+          "close": 83.55
+        },
+        {
+          "trading_date": "2026-09-07",
+          "close": 81.25
+        },
+        {
+          "trading_date": "2026-09-08",
+          "close": 81.65
+        },
+        {
+          "trading_date": "2026-09-09",
+          "close": 80.25
+        },
+        {
+          "trading_date": "2026-09-10",
+          "close": 81.35
+        },
+        {
+          "trading_date": "2026-09-11",
+          "close": 78.35
+        },
+        {
+          "trading_date": "2026-09-14",
+          "close": 78.15
+        },
+        {
+          "trading_date": "2026-09-15",
+          "close": 77.1
+        },
+        {
+          "trading_date": "2026-09-16",
+          "close": 78.05
+        },
+        {
+          "trading_date": "2026-09-17",
+          "close": 76.7
+        },
+        {
+          "trading_date": "2026-09-18",
+          "close": 79.45
+        },
+        {
+          "trading_date": "2026-09-21",
+          "close": 79.1
+        },
+        {
+          "trading_date": "2026-09-22",
+          "close": 78.05
+        },
+        {
+          "trading_date": "2026-09-23",
+          "close": 78.35
+        },
+        {
+          "trading_date": "2026-09-24",
+          "close": 76.55
+        },
+        {
+          "trading_date": "2026-09-29",
+          "close": 70.9
+        },
+        {
+          "trading_date": "2026-09-30",
+          "close": 72.2
+        },
+        {
           "trading_date": "2026-10-01",
           "close": 72.65
         }
       ],
-      "ai_summary": {
-        "text": "儘管國際金價與美元兌台幣皆呈微幅走升，期元大S&P黃金正2卻出現逾 12% 的劇烈重挫，推測主因可能是該基金先前的高溢價進行了急劇的收斂與修正。此外，在技術面偏冷的背景下，市場情緒轉趨保守並引發獲利了結或停損賣壓，進一步加劇了價格與標的資產走勢的脫節。",
-        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
-      }
+      "ai_summary": null
     },
     "GCF": {
       "code": "GCF",
@@ -507,57 +493,57 @@
       },
       "latest": {
         "trading_date": "2026-10-02",
-        "close": 4189.2001953125,
+        "close": 4176.5,
         "volume": null,
-        "quote_time": "2026-10-02 08:51",
+        "quote_time": "2026-10-02 09:51",
         "is_realtime": true
       },
       "indicators": {
-        "ma20": 4352.555004882813,
-        "rsi14": 35.235182476402045,
+        "ma20": 4335.059985351562,
+        "rsi14": 35.04011265010841,
         "bollinger": {
-          "upper": 4557.276758790232,
-          "middle": 4352.555004882813,
-          "lower": 4147.833250975394
+          "upper": 4532.585631416073,
+          "middle": 4335.059985351562,
+          "lower": 4137.534339287052
         },
         "macd": {
-          "macd": -59.373555002172,
-          "signal": -32.62538078108115,
-          "histogram": -26.74817422109085
+          "macd": -62.33957831108637,
+          "signal": -38.40102299363495,
+          "histogram": -23.938555317451417
         },
         "volatility_squeeze": {
-          "short_vol": 0.015265792916320254,
-          "long_vol": 0.012393470102000492,
-          "ratio": 1.2317609830564022,
+          "short_vol": 0.01475978306232776,
+          "long_vol": 0.010267568621055797,
+          "ratio": 1.437514917802423,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.0392903226401503,
+          "position": 0.016055915315376805,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4697.7998046875,
-          "pullback_pct": 10.826336381288863,
+          "pullback_pct": 11.088167312365933,
           "stage": "最後 40%（等重新轉強）",
           "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
         },
         "prior_low": {
-          "price": 4036.300048828125,
-          "days_ago": 45
+          "price": 4168.39990234375,
+          "days_ago": 4
         },
         "technical_score": {
           "scores": {
-            "rsi14": 64.76481752359796,
-            "bollinger": 89.89678831204874,
-            "ma20": 68.76539289992394,
-            "macd": 64.17300492552444
+            "rsi14": 64.95988734989159,
+            "bollinger": 90.03532861655806,
+            "ma20": 68.24197168461856,
+            "macd": 64.92484372826513
           },
-          "composite": 71.90000091527376,
+          "composite": 72.04050784483334,
           "label": "技術面偏冷"
         },
         "stage_signals": {
           "trend_intact": false,
-          "momentum_stabilizing": true,
+          "momentum_stabilizing": false,
           "macd_golden_cross": false
         }
       },
@@ -1067,39 +1053,40 @@
           "close": 4186.7001953125
         },
         {
+          "trading_date": "2026-10-01",
+          "close": 4202.2998046875
+        },
+        {
           "trading_date": "2026-10-02",
-          "close": 4189.2001953125
+          "close": 4176.89990234375
         }
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4301.598678103164,
+        "latest_price": 4281.3139125845855,
         "relative_position": {
-          "position": 0.07727575772784194,
+          "position": 0.04016434185599841,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4805.951434609007,
-          "pullback_pct": 10.49433735168144,
+          "pullback_pct": 10.916413308847849,
           "stage": "最後 40%（等重新轉強）",
           "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 61.095356829149885,
-            "bollinger": 83.71584428068047,
-            "ma20": 67.45502722499097,
-            "macd": 62.30155897371084
+            "rsi14": 62.71880417686335,
+            "bollinger": 87.4231966971993,
+            "ma20": 69.6212223084466,
+            "macd": 62.737801727812744
           },
-          "composite": 68.64194682713304,
+          "composite": 70.62525622758051,
           "label": "技術面偏冷"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
       },
-      "ai_summary": {
-        "text": "今日國際金價僅微幅上漲 0.06%，主因技術面狀態偏冷，限制了市場追高與突破的動能。同時，美元兌台幣上漲 0.22% 顯示美元表現相對堅實，進一步對金價形成輕微壓制。在技術面缺乏支撐與美元微幅走強的雙重影響下，整體買盤力道不足，致使金價呈現平盤附近的窄幅整理。",
-        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
-      }
+      "ai_summary": null
     }
   },
   "macro_context": {
@@ -1634,13 +1621,13 @@
       },
       {
         "date": "2026-10-02",
-        "close": 31.937999725341797
+        "close": 31.881000518798828
       }
     ],
     "stale": false,
     "note": "總體背景參考，非本頁技術指標，僅供市場情緒判讀。",
     "divergence": {
-      "same_direction_days": 4,
+      "same_direction_days": 3,
       "checked_days": 5,
       "is_divergent": true
     }
