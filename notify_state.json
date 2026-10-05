@@ -1,4 +1,8 @@
 {
+  "GCF": {
+    "stage": "最後 40%（等重新轉強）",
+    "prior_low_price": 4090.5
+  },
   "00635U": {
     "stage": "最後 40%（等重新轉強）",
     "prior_low_price": 44.29
@@ -6,9 +10,5 @@
   "00708L": {
     "stage": "最後 40%（等重新轉強）",
     "prior_low_price": 69.5
-  },
-  "GCF": {
-    "stage": "最後 40%（等重新轉強）",
-    "prior_low_price": 4090.5
   }
 }
