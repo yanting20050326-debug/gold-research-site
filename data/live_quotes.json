@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-10-05T02:40:55.699729+00:00",
+  "generated_at": "2026-10-05T02:45:55.328822+00:00",
   "quotes": {
     "00635U": {
-      "close": 42.795,
-      "quote_time": "10:40:43",
+      "close": 42.785,
+      "quote_time": "10:43:59",
       "is_realtime": true
     },
     "00708L": {
-      "close": 71.475,
-      "quote_time": "10:40:22",
+      "close": 71.42500000000001,
+      "quote_time": "10:45:33",
       "is_realtime": true
     },
     "GCF": {
-      "close": 4186.5,
-      "quote_time": "2026-10-05 10:30",
+      "close": 4182.2001953125,
+      "quote_time": "2026-10-05 10:35",
       "is_realtime": true
     }
   }
