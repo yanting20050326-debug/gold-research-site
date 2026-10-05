@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T03:25:58.737116+00:00",
+  "generated_at": "2026-10-05T03:30:55.693335+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -17,9 +17,9 @@
       },
       "latest": {
         "trading_date": "2026-10-02",
-        "close": 42.66,
+        "close": 42.655,
         "volume": 1623418,
-        "quote_time": "11:25:57",
+        "quote_time": "11:29:59",
         "is_realtime": true
       },
       "indicators": {
@@ -259,7 +259,7 @@
         "trading_date": "2026-10-02",
         "close": 71.025,
         "volume": 3096080,
-        "quote_time": "11:25:43",
+        "quote_time": "11:29:59",
         "is_realtime": true
       },
       "indicators": {
@@ -498,37 +498,37 @@
       },
       "latest": {
         "trading_date": "2026-10-05",
-        "close": 4164.89990234375,
+        "close": 4169.5,
         "volume": null,
-        "quote_time": "2026-10-05 11:16",
+        "quote_time": "2026-10-05 11:20",
         "is_realtime": true
       },
       "indicators": {
-        "ma20": 4318.744970703125,
-        "rsi14": 34.46096547496562,
+        "ma20": 4318.9749755859375,
+        "rsi14": 35.02881387417975,
         "bollinger": {
-          "upper": 4520.492649168321,
-          "middle": 4318.744970703125,
-          "lower": 4116.997292237928
+          "upper": 4520.02985715176,
+          "middle": 4318.9749755859375,
+          "lower": 4117.920094020115
         },
         "macd": {
-          "macd": -66.62720181541681,
-          "signal": -44.23137341229723,
-          "histogram": -22.39582840311958
+          "macd": -66.26024245822282,
+          "signal": -44.15798154085843,
+          "histogram": -22.10226091736439
         },
         "volatility_squeeze": {
-          "short_vol": 0.004793925163150573,
-          "long_vol": 0.010132695986646753,
-          "ratio": 0.473114477081735,
+          "short_vol": 0.004849995859061413,
+          "long_vol": 0.01015829378965035,
+          "ratio": 0.4774419759352471,
           "is_compressed": true
         },
         "relative_position": {
-          "position": 0.004855457808123249,
+          "position": 0.013445742880485528,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4697.7998046875,
-          "pullback_pct": 11.343606038980598,
+          "pullback_pct": 11.245685781679297,
           "stage": "最後 40%（等重新轉強）",
           "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
         },
@@ -538,17 +538,17 @@
         },
         "technical_score": {
           "scores": {
-            "rsi14": 65.53903452503438,
-            "bollinger": 88.12808889047876,
-            "ma20": 67.81131664441943,
-            "macd": 65.99731167078544
+            "rsi14": 64.97118612582025,
+            "bollinger": 87.17268002194758,
+            "ma20": 67.30445029560039,
+            "macd": 65.89165186670412
           },
-          "composite": 71.8689379326795,
+          "composite": 71.33499207751808,
           "label": "技術面偏冷"
         },
         "stage_signals": {
           "trend_intact": false,
-          "momentum_stabilizing": false,
+          "momentum_stabilizing": true,
           "macd_golden_cross": false
         }
       },
@@ -1059,30 +1059,30 @@
         },
         {
           "trading_date": "2026-10-05",
-          "close": 4164.89990234375
+          "close": 4169.5
         }
       ],
       "passbook": {
         "unit": "NT$/公克（試算）",
-        "latest_price": 4250.802948666673,
+        "latest_price": 4256.972460491353,
         "relative_position": {
           "position": 0.0,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4805.951434609007,
-          "pullback_pct": 11.55127124141443,
+          "pullback_pct": 11.42289891163491,
           "stage": "最後 40%（等重新轉強）",
           "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
         },
         "technical_score": {
           "scores": {
-            "rsi14": 63.85813501209325,
-            "bollinger": 94.32210754508117,
-            "ma20": 70.5162610111366,
-            "macd": 63.89715630602491
+            "rsi14": 63.52249211078882,
+            "bollinger": 93.12062997148813,
+            "ma20": 69.85376390094692,
+            "macd": 63.76140408658809
           },
-          "composite": 73.14841496858398,
+          "composite": 72.56457251745299,
           "label": "技術面偏冷"
         },
         "note": "台灣銀行黃金存摺沒有公開歷史報價 API，這裡改用「國際金價 x 美元兌台幣」換算成新台幣／公克的試算價格，估算存摺可能的相對位置與回檔階段；實際牌價仍受銀行買賣價差、換匯時點影響，並非完全同步，請以銀行公告牌價為準。"
@@ -1618,7 +1618,7 @@
       },
       {
         "date": "2026-10-05",
-        "close": 31.7450008392334
+        "close": 31.756000518798828
       }
     ],
     "stale": false,
