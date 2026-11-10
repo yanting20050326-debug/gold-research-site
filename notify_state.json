@@ -1,14 +1,14 @@
 {
-  "GCF": {
-    "stage": "加碼 20%（前提：出現止跌）",
-    "prior_low_price": 4140.7001953125
-  },
   "00635U": {
-    "stage": "最後 40%（等重新轉強）",
-    "prior_low_price": 42.45
+    "stage": "加碼 20%（前提：趨勢沒壞）",
+    "prior_low_price": 40.1
   },
   "00708L": {
-    "stage": "最後 40%（等重新轉強）",
-    "prior_low_price": 70.25
+    "stage": "加碼 20%（前提：趨勢沒壞）",
+    "prior_low_price": 62.75
+  },
+  "GCF": {
+    "stage": "觀察區（尚未回檔到位）",
+    "prior_low_price": 3898.89990234375
   }
 }
