@@ -12,7 +12,7 @@
     "prior_low_price": 3898.89990234375
   },
   "TBBGOLD": {
-    "stage": "加碼 20%（前提：趨勢沒壞）",
+    "stage": "加碼 20%（前提：出現止跌）",
     "prior_low_price": 4092.0
   }
 }
