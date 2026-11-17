@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T08:01:41.401818+00:00",
+  "generated_at": "2026-11-17T08:29:40.084351+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -576,38 +576,38 @@
       },
       "latest": {
         "trading_date": "2026-11-17",
-        "close": 3876.10009765625,
+        "close": 3867.199951171875,
         "volume": null,
-        "quote_time": "2026-11-17 15:51",
+        "quote_time": "2026-11-17 16:19",
         "is_realtime": true,
         "prev_close": 3853.0
       },
       "indicators": {
-        "ma20": 4006.5249877929687,
-        "rsi14": 36.49430661362093,
+        "ma20": 4006.074987792969,
+        "rsi14": 35.60903801191432,
         "bollinger": {
-          "upper": 4180.670088056579,
-          "middle": 4006.5249877929687,
-          "lower": 3832.379887529359
+          "upper": 4181.606852564909,
+          "middle": 4006.074987792969,
+          "lower": 3830.5431230210284
         },
         "macd": {
-          "macd": -72.23070995197395,
-          "signal": -61.63414757278072,
-          "histogram": -10.59656237919323
+          "macd": -72.94865866992268,
+          "signal": -61.77773731637046,
+          "histogram": -11.170921353552217
         },
         "volatility_squeeze": {
-          "short_vol": 0.01180511663509171,
-          "long_vol": 0.01567946599444714,
-          "ratio": 0.7529029776442945,
+          "short_vol": 0.011288982804409462,
+          "long_vol": 0.015619150335681758,
+          "ratio": 0.7227654873530424,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.0635841180154777,
+          "position": 0.038811189751061105,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4216.2998046875,
-          "pullback_pct": 8.068679239864078,
+          "pullback_pct": 8.282136546434028,
           "stage": "加碼 20%（前提：出現止跌）",
           "hint": "符合加碼條件，若已出現止跌可再加碼 20%"
         },
@@ -615,17 +615,17 @@
         "prior_low_broken": true,
         "technical_score": {
           "scores": {
-            "rsi14": 63.50569338637907,
-            "bollinger": 87.44718913690079,
-            "ma20": 66.27656017797165,
-            "macd": 68.63489283871938
+            "rsi14": 64.39096198808568,
+            "bollinger": 89.58679819110955,
+            "ma20": 67.34551781484288,
+            "macd": 68.86391787844721
           },
-          "composite": 71.46608388499273,
+          "composite": 72.54679896812132,
           "label": "技術面偏冷"
         },
         "stage_signals": {
           "trend_intact": false,
-          "momentum_stabilizing": true,
+          "momentum_stabilizing": false,
           "macd_golden_cross": false
         }
       },
@@ -1140,7 +1140,7 @@
         },
         {
           "trading_date": "2026-11-17",
-          "close": 3876.10009765625
+          "close": 3867.10009765625
         }
       ],
       "ai_summary": {
@@ -2267,7 +2267,7 @@
       },
       {
         "date": "2026-11-17",
-        "close": 32.926998138427734
+        "close": 32.91600036621094
       }
     ],
     "stale": false,
