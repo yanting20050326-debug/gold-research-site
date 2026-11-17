@@ -1,9 +1,10 @@
 {
-  "generated_at": "2026-11-17T02:58:43.298323+00:00",
+  "generated_at": "2026-11-17T03:13:25.851276+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
   "live_quotes_url": "https://gold-quote-worker.abilabnpust.workers.dev/",
+  "assistant_url": "https://gold-quote-worker.abilabnpust.workers.dev/chat",
   "targets": {
     "00635U": {
       "code": "00635U",
@@ -18,9 +19,9 @@
       },
       "latest": {
         "trading_date": "2026-11-16",
-        "close": 39.64,
+        "close": 39.71,
         "volume": 3271673,
-        "quote_time": "10:58:09",
+        "quote_time": "11:11:58",
         "is_realtime": true,
         "prev_close": 39.74
       },
@@ -292,9 +293,9 @@
       },
       "latest": {
         "trading_date": "2026-11-16",
-        "close": 61.0,
+        "close": 61.25,
         "volume": 7044568,
-        "quote_time": "10:58:29",
+        "quote_time": "11:12:03",
         "is_realtime": true,
         "prev_close": 61.25
       },
@@ -567,38 +568,38 @@
       },
       "latest": {
         "trading_date": "2026-11-17",
-        "close": 3869.699951171875,
+        "close": 3872.10009765625,
         "volume": null,
-        "quote_time": "2026-11-17 10:48",
+        "quote_time": "2026-11-17 11:03",
         "is_realtime": true,
         "prev_close": 3853.0
       },
       "indicators": {
-        "ma20": 4006.189978027344,
-        "rsi14": 35.83759341328701,
+        "ma20": 4006.324987792969,
+        "rsi14": 36.103877555293245,
         "bollinger": {
-          "upper": 4181.360165097251,
-          "middle": 4006.189978027344,
-          "lower": 3831.0197909574363
+          "upper": 4181.076914163013,
+          "middle": 4006.324987792969,
+          "lower": 3831.5730614229246
         },
         "macd": {
-          "macd": -72.765198466931,
-          "signal": -61.74104527577212,
-          "histogram": -11.024153191158874
+          "macd": -72.54979827106217,
+          "signal": -61.697965236598364,
+          "histogram": -10.851833034463809
         },
         "volatility_squeeze": {
-          "short_vol": 0.011415819389197402,
-          "long_vol": 0.015633008350614677,
-          "ratio": 0.7302381686982559,
+          "short_vol": 0.011569252627857761,
+          "long_vol": 0.01565064347387681,
+          "ratio": 0.739218975064413,
           "is_compressed": false
         },
         "relative_position": {
-          "position": 0.04514151158946183,
+          "position": 0.052573927675736994,
           "label": "相對低點區"
         },
         "pullback_stage": {
           "recent_high": 4216.2998046875,
-          "pullback_pct": 8.227590978186173,
+          "pullback_pct": 8.163549153895168,
           "stage": "加碼 20%（前提：出現止跌）",
           "hint": "符合加碼條件，若已出現止跌可再加碼 20%"
         },
@@ -606,17 +607,17 @@
         "prior_low_broken": true,
         "technical_score": {
           "scores": {
-            "rsi14": 64.16240658671299,
-            "bollinger": 89.04490768997213,
-            "ma20": 67.07234010791339,
-            "macd": 68.80529288866113
+            "rsi14": 63.896122444706755,
+            "bollinger": 88.40440930318908,
+            "ma20": 66.75162281463611,
+            "macd": 68.73655030637663
           },
-          "composite": 72.27123681831492,
+          "composite": 71.94717621722714,
           "label": "技術面偏冷"
         },
         "stage_signals": {
           "trend_intact": false,
-          "momentum_stabilizing": false,
+          "momentum_stabilizing": true,
           "macd_golden_cross": false
         }
       },
@@ -1131,7 +1132,7 @@
         },
         {
           "trading_date": "2026-11-17",
-          "close": 3869.39990234375
+          "close": 3872.10009765625
         }
       ],
       "ai_summary": {
@@ -2258,7 +2259,7 @@
       },
       {
         "date": "2026-11-17",
-        "close": 32.965999603271484
+        "close": 32.99300003051758
       }
     ],
     "stale": false,
