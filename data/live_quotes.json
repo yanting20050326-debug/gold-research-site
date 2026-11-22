@@ -1,4 +1,10 @@
 {
-  "generated_at": "2026-11-22T17:49:53.595569+00:00",
-  "quotes": {}
+  "generated_at": "2026-11-22T23:37:20.435292+00:00",
+  "quotes": {
+    "GCF": {
+      "close": 3571.0,
+      "quote_time": "2026-11-23 07:27",
+      "is_realtime": true
+    }
+  }
 }
