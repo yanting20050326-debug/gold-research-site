@@ -1,11 +1,1180 @@
 {
-  "generated_at": "2026-11-24T06:08:40.824466+00:00",
+  "generated_at": "2026-11-24T10:43:15.493026+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
   "live_quotes_url": "https://gold-quote-worker.abilabnpust.workers.dev/",
   "assistant_url": "https://gold-quote-worker.abilabnpust.workers.dev/chat",
   "targets": {
+    "GCF": {
+      "code": "GCF",
+      "display_name": "國際盤黃金（COMEX）",
+      "asset_class": "commodity_futures",
+      "asset_class_note": "追蹤COMEX黃金期貨（Yahoo Finance代碼GC=F），不是銀行間即期黃金報價（真正的XAUUSD）；兩者走勢高度連動、價差通常很小，但不是同一個報價來源。是台灣黃金相關標的（00635U、00708L、銀行黃金存摺）的共同定價基礎，本身無法在台灣交易所直接買賣。",
+      "badge": "COMEX期貨報價，非台股標的",
+      "pullback_scale": 1.0,
+      "quote_delay_note": "Yahoo Finance 免費期貨資料通常延遲約 10 分鐘，此標的的即時價格不會比這個延遲更即時，跟 TWSE 標的的近乎即時報價不同。",
+      "data_source": {
+        "name": "Yahoo Finance (GC=F)",
+        "as_of": "2026-11-24"
+      },
+      "latest": {
+        "trading_date": "2026-11-24",
+        "close": 3623.89990234375,
+        "volume": null,
+        "quote_time": "2026-11-24 18:33",
+        "is_realtime": true,
+        "prev_close": 3651.39990234375
+      },
+      "indicators": {
+        "ma20": 3900.269970703125,
+        "rsi14": 32.14983520435122,
+        "bollinger": {
+          "upper": 4242.830673208242,
+          "middle": 3900.269970703125,
+          "lower": 3557.709268198009
+        },
+        "macd": {
+          "macd": -131.56839227969613,
+          "signal": -99.35537956420518,
+          "histogram": -32.21301271549095
+        },
+        "volatility_squeeze": {
+          "short_vol": 0.02881170489479437,
+          "long_vol": 0.020733772966678433,
+          "ratio": 1.3896026034961464,
+          "is_compressed": false
+        },
+        "relative_position": {
+          "position": 0.1629862823595339,
+          "label": "相對低點區"
+        },
+        "pullback_stage": {
+          "recent_high": 4181.10009765625,
+          "pullback_pct": 13.326640891110047,
+          "stage": "最後 40%（等重新轉強）",
+          "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
+        },
+        "prior_low": null,
+        "prior_low_broken": true,
+        "technical_score": {
+          "scores": {
+            "rsi14": 67.85016479564878,
+            "bollinger": 90.33884598237702,
+            "ma20": 85.42960749324133,
+            "macd": 86.30574679907812
+          },
+          "composite": 82.48109126758632,
+          "label": "技術面偏冷"
+        },
+        "stage_signals": {
+          "trend_intact": false,
+          "momentum_stabilizing": true,
+          "macd_golden_cross": false
+        }
+      },
+      "chart": [
+        {
+          "trading_date": "2026-05-26",
+          "close": 4502.2998046875
+        },
+        {
+          "trading_date": "2026-05-27",
+          "close": 4448.39990234375
+        },
+        {
+          "trading_date": "2026-05-28",
+          "close": 4499.2998046875
+        },
+        {
+          "trading_date": "2026-05-29",
+          "close": 4593.0
+        },
+        {
+          "trading_date": "2026-06-01",
+          "close": 4506.2998046875
+        },
+        {
+          "trading_date": "2026-06-02",
+          "close": 4519.89990234375
+        },
+        {
+          "trading_date": "2026-06-03",
+          "close": 4466.89990234375
+        },
+        {
+          "trading_date": "2026-06-04",
+          "close": 4505.0
+        },
+        {
+          "trading_date": "2026-06-05",
+          "close": 4365.2998046875
+        },
+        {
+          "trading_date": "2026-06-08",
+          "close": 4363.39990234375
+        },
+        {
+          "trading_date": "2026-06-09",
+          "close": 4286.39990234375
+        },
+        {
+          "trading_date": "2026-06-10",
+          "close": 4133.2998046875
+        },
+        {
+          "trading_date": "2026-06-11",
+          "close": 4114.0
+        },
+        {
+          "trading_date": "2026-06-12",
+          "close": 4238.7998046875
+        },
+        {
+          "trading_date": "2026-06-15",
+          "close": 4351.60009765625
+        },
+        {
+          "trading_date": "2026-06-16",
+          "close": 4354.39990234375
+        },
+        {
+          "trading_date": "2026-06-17",
+          "close": 4381.39990234375
+        },
+        {
+          "trading_date": "2026-06-18",
+          "close": 4245.89990234375
+        },
+        {
+          "trading_date": "2026-06-22",
+          "close": 4202.7001953125
+        },
+        {
+          "trading_date": "2026-06-23",
+          "close": 4149.39990234375
+        },
+        {
+          "trading_date": "2026-06-24",
+          "close": 4008.800048828125
+        },
+        {
+          "trading_date": "2026-06-25",
+          "close": 4047.60009765625
+        },
+        {
+          "trading_date": "2026-06-26",
+          "close": 4096.2998046875
+        },
+        {
+          "trading_date": "2026-06-29",
+          "close": 4038.89990234375
+        },
+        {
+          "trading_date": "2026-06-30",
+          "close": 4038.5
+        },
+        {
+          "trading_date": "2026-07-01",
+          "close": 4082.39990234375
+        },
+        {
+          "trading_date": "2026-07-02",
+          "close": 4125.7001953125
+        },
+        {
+          "trading_date": "2026-07-06",
+          "close": 4167.5
+        },
+        {
+          "trading_date": "2026-07-07",
+          "close": 4157.39990234375
+        },
+        {
+          "trading_date": "2026-07-08",
+          "close": 4082.39990234375
+        },
+        {
+          "trading_date": "2026-07-09",
+          "close": 4140.7998046875
+        },
+        {
+          "trading_date": "2026-07-10",
+          "close": 4113.7001953125
+        },
+        {
+          "trading_date": "2026-07-13",
+          "close": 4005.699951171875
+        },
+        {
+          "trading_date": "2026-07-14",
+          "close": 4069.699951171875
+        },
+        {
+          "trading_date": "2026-07-15",
+          "close": 4051.800048828125
+        },
+        {
+          "trading_date": "2026-07-16",
+          "close": 3992.10009765625
+        },
+        {
+          "trading_date": "2026-07-17",
+          "close": 4018.800048828125
+        },
+        {
+          "trading_date": "2026-07-20",
+          "close": 4015.89990234375
+        },
+        {
+          "trading_date": "2026-07-21",
+          "close": 4076.39990234375
+        },
+        {
+          "trading_date": "2026-07-22",
+          "close": 4151.89990234375
+        },
+        {
+          "trading_date": "2026-07-23",
+          "close": 4050.199951171875
+        },
+        {
+          "trading_date": "2026-07-24",
+          "close": 4070.800048828125
+        },
+        {
+          "trading_date": "2026-07-27",
+          "close": 4077.0
+        },
+        {
+          "trading_date": "2026-07-28",
+          "close": 4038.699951171875
+        },
+        {
+          "trading_date": "2026-07-29",
+          "close": 4036.300048828125
+        },
+        {
+          "trading_date": "2026-07-30",
+          "close": 4100.10009765625
+        },
+        {
+          "trading_date": "2026-07-31",
+          "close": 4107.0
+        },
+        {
+          "trading_date": "2026-08-03",
+          "close": 4090.5
+        },
+        {
+          "trading_date": "2026-08-04",
+          "close": 4152.60009765625
+        },
+        {
+          "trading_date": "2026-08-05",
+          "close": 4305.2001953125
+        },
+        {
+          "trading_date": "2026-08-06",
+          "close": 4299.60009765625
+        },
+        {
+          "trading_date": "2026-08-07",
+          "close": 4399.7001953125
+        },
+        {
+          "trading_date": "2026-08-10",
+          "close": 4419.7001953125
+        },
+        {
+          "trading_date": "2026-08-11",
+          "close": 4441.10009765625
+        },
+        {
+          "trading_date": "2026-08-12",
+          "close": 4467.5
+        },
+        {
+          "trading_date": "2026-08-13",
+          "close": 4420.39990234375
+        },
+        {
+          "trading_date": "2026-08-14",
+          "close": 4437.2998046875
+        },
+        {
+          "trading_date": "2026-08-17",
+          "close": 4473.7001953125
+        },
+        {
+          "trading_date": "2026-08-18",
+          "close": 4420.60009765625
+        },
+        {
+          "trading_date": "2026-08-19",
+          "close": 4545.2998046875
+        },
+        {
+          "trading_date": "2026-08-20",
+          "close": 4571.39990234375
+        },
+        {
+          "trading_date": "2026-08-21",
+          "close": 4680.60009765625
+        },
+        {
+          "trading_date": "2026-08-24",
+          "close": 4697.7998046875
+        },
+        {
+          "trading_date": "2026-08-25",
+          "close": 4694.5
+        },
+        {
+          "trading_date": "2026-08-26",
+          "close": 4653.2998046875
+        },
+        {
+          "trading_date": "2026-08-27",
+          "close": 4664.0
+        },
+        {
+          "trading_date": "2026-08-28",
+          "close": 4529.89990234375
+        },
+        {
+          "trading_date": "2026-08-31",
+          "close": 4481.5
+        },
+        {
+          "trading_date": "2026-09-01",
+          "close": 4396.39990234375
+        },
+        {
+          "trading_date": "2026-09-02",
+          "close": 4414.60009765625
+        },
+        {
+          "trading_date": "2026-09-03",
+          "close": 4539.89990234375
+        },
+        {
+          "trading_date": "2026-09-04",
+          "close": 4476.60009765625
+        },
+        {
+          "trading_date": "2026-09-08",
+          "close": 4439.0
+        },
+        {
+          "trading_date": "2026-09-09",
+          "close": 4460.7001953125
+        },
+        {
+          "trading_date": "2026-09-10",
+          "close": 4407.2998046875
+        },
+        {
+          "trading_date": "2026-09-11",
+          "close": 4408.89990234375
+        },
+        {
+          "trading_date": "2026-09-14",
+          "close": 4351.89990234375
+        },
+        {
+          "trading_date": "2026-09-15",
+          "close": 4332.7998046875
+        },
+        {
+          "trading_date": "2026-09-16",
+          "close": 4387.5
+        },
+        {
+          "trading_date": "2026-09-17",
+          "close": 4399.7001953125
+        },
+        {
+          "trading_date": "2026-09-18",
+          "close": 4424.89990234375
+        },
+        {
+          "trading_date": "2026-09-21",
+          "close": 4383.89990234375
+        },
+        {
+          "trading_date": "2026-09-22",
+          "close": 4376.39990234375
+        },
+        {
+          "trading_date": "2026-09-23",
+          "close": 4318.39990234375
+        },
+        {
+          "trading_date": "2026-09-24",
+          "close": 4298.0
+        },
+        {
+          "trading_date": "2026-09-25",
+          "close": 4321.2001953125
+        },
+        {
+          "trading_date": "2026-09-28",
+          "close": 4168.39990234375
+        },
+        {
+          "trading_date": "2026-09-29",
+          "close": 4179.7001953125
+        },
+        {
+          "trading_date": "2026-09-30",
+          "close": 4186.7001953125
+        },
+        {
+          "trading_date": "2026-10-01",
+          "close": 4202.2998046875
+        },
+        {
+          "trading_date": "2026-10-02",
+          "close": 4162.2998046875
+        },
+        {
+          "trading_date": "2026-10-05",
+          "close": 4156.7998046875
+        },
+        {
+          "trading_date": "2026-10-06",
+          "close": 4187.10009765625
+        },
+        {
+          "trading_date": "2026-10-07",
+          "close": 4140.7001953125
+        },
+        {
+          "trading_date": "2026-10-08",
+          "close": 4157.0
+        },
+        {
+          "trading_date": "2026-10-09",
+          "close": 4216.2998046875
+        },
+        {
+          "trading_date": "2026-10-12",
+          "close": 4190.60009765625
+        },
+        {
+          "trading_date": "2026-10-13",
+          "close": 4177.2998046875
+        },
+        {
+          "trading_date": "2026-10-14",
+          "close": 4107.89990234375
+        },
+        {
+          "trading_date": "2026-10-15",
+          "close": 4170.10009765625
+        },
+        {
+          "trading_date": "2026-10-16",
+          "close": 4181.10009765625
+        },
+        {
+          "trading_date": "2026-10-19",
+          "close": 4160.10009765625
+        },
+        {
+          "trading_date": "2026-10-20",
+          "close": 4142.60009765625
+        },
+        {
+          "trading_date": "2026-10-21",
+          "close": 4150.0
+        },
+        {
+          "trading_date": "2026-10-22",
+          "close": 4060.39990234375
+        },
+        {
+          "trading_date": "2026-10-23",
+          "close": 4007.89990234375
+        },
+        {
+          "trading_date": "2026-10-26",
+          "close": 4038.39990234375
+        },
+        {
+          "trading_date": "2026-10-27",
+          "close": 4074.60009765625
+        },
+        {
+          "trading_date": "2026-10-28",
+          "close": 4051.60009765625
+        },
+        {
+          "trading_date": "2026-10-29",
+          "close": 4031.39990234375
+        },
+        {
+          "trading_date": "2026-10-30",
+          "close": 3898.89990234375
+        },
+        {
+          "trading_date": "2026-11-02",
+          "close": 3969.60009765625
+        },
+        {
+          "trading_date": "2026-11-03",
+          "close": 3940.39990234375
+        },
+        {
+          "trading_date": "2026-11-04",
+          "close": 4073.0
+        },
+        {
+          "trading_date": "2026-11-05",
+          "close": 4113.5
+        },
+        {
+          "trading_date": "2026-11-06",
+          "close": 4074.89990234375
+        },
+        {
+          "trading_date": "2026-11-09",
+          "close": 4114.5
+        },
+        {
+          "trading_date": "2026-11-10",
+          "close": 4030.199951171875
+        },
+        {
+          "trading_date": "2026-11-11",
+          "close": 4000.5
+        },
+        {
+          "trading_date": "2026-11-12",
+          "close": 3885.300048828125
+        },
+        {
+          "trading_date": "2026-11-13",
+          "close": 3886.300048828125
+        },
+        {
+          "trading_date": "2026-11-16",
+          "close": 3853.0
+        },
+        {
+          "trading_date": "2026-11-17",
+          "close": 3864.199951171875
+        },
+        {
+          "trading_date": "2026-11-18",
+          "close": 3741.89990234375
+        },
+        {
+          "trading_date": "2026-11-19",
+          "close": 3685.5
+        },
+        {
+          "trading_date": "2026-11-20",
+          "close": 3515.39990234375
+        },
+        {
+          "trading_date": "2026-11-23",
+          "close": 3651.39990234375
+        },
+        {
+          "trading_date": "2026-11-24",
+          "close": 3623.89990234375
+        }
+      ],
+      "ai_summary": {
+        "text": "今日COMEX國際金價下跌0.48%，主要受到技術面偏冷與買盤動能不足的影響，呈現短線回檔修正。雖然美元兌台幣下跌0.28%顯示美元略有走弱，但並未對金價帶來支撐，推測整體走勢可能受到市場避險情緒降溫及獲利回吐賣壓所壓制。",
+        "generated_date": "2026-11-24",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      }
+    },
+    "TBBGOLD": {
+      "code": "TBBGOLD",
+      "display_name": "台企銀黃金存摺",
+      "asset_class": "bank_gold_passbook",
+      "asset_class_note": "臺灣企銀黃金存摺的公告牌價（新台幣／公克），價格跟著國際金價與美元兌台幣走，但由銀行自行掛牌、一天會更新數次。本站的回檔階段與技術指標都用「本行賣出價」（你向銀行買進的價格）計算；買進價（你賣回給銀行的價格）比賣出價低，兩者的差距就是進出一趟的成本。牌價資料來自銀行公開頁面，僅供參考，實際交易價格以銀行交易確認時顯示的為準。",
+      "badge": "銀行牌價，非即時行情",
+      "pullback_scale": 1.0,
+      "price_digits": 0,
+      "unit": "元／公克",
+      "data_source": {
+        "name": "臺灣企銀黃金存摺牌價",
+        "as_of": "2026-11-24"
+      },
+      "latest": {
+        "trading_date": "2026-11-24",
+        "close": 3867.0,
+        "volume": null,
+        "quote_time": null,
+        "is_realtime": false,
+        "prev_close": 3872.0
+      },
+      "indicators": {
+        "ma20": 4156.65,
+        "rsi14": 32.16876918364005,
+        "bollinger": {
+          "upper": 4494.671463815539,
+          "middle": 4156.65,
+          "lower": 3818.6285361844602
+        },
+        "macd": {
+          "macd": -114.29314266466554,
+          "signal": -74.45218076500113,
+          "histogram": -39.84096189966441
+        },
+        "volatility_squeeze": {
+          "short_vol": 0.02216872284519467,
+          "long_vol": 0.01906850240719358,
+          "ratio": 1.1625833204830776,
+          "is_compressed": false
+        },
+        "relative_position": {
+          "position": 0.11696869851729819,
+          "label": "相對低點區"
+        },
+        "pullback_stage": {
+          "recent_high": 4403.0,
+          "pullback_pct": 12.173518055870996,
+          "stage": "最後 40%（等重新轉強）",
+          "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
+        },
+        "prior_low": null,
+        "prior_low_broken": true,
+        "technical_score": {
+          "scores": {
+            "rsi14": 67.83123081635995,
+            "bollinger": 92.84491238078058,
+            "ma20": 84.84175959005445,
+            "macd": 79.55602344573714
+          },
+          "composite": 81.26848155823303,
+          "label": "技術面偏冷"
+        },
+        "stage_signals": {
+          "trend_intact": false,
+          "momentum_stabilizing": false,
+          "macd_golden_cross": false
+        }
+      },
+      "chart": [
+        {
+          "trading_date": "2026-05-25",
+          "close": 4637.0
+        },
+        {
+          "trading_date": "2026-05-26",
+          "close": 4599.0
+        },
+        {
+          "trading_date": "2026-05-27",
+          "close": 4548.0
+        },
+        {
+          "trading_date": "2026-05-28",
+          "close": 4461.0
+        },
+        {
+          "trading_date": "2026-05-29",
+          "close": 4578.0
+        },
+        {
+          "trading_date": "2026-06-01",
+          "close": 4571.0
+        },
+        {
+          "trading_date": "2026-06-02",
+          "close": 4619.0
+        },
+        {
+          "trading_date": "2026-06-03",
+          "close": 4541.0
+        },
+        {
+          "trading_date": "2026-06-04",
+          "close": 4546.0
+        },
+        {
+          "trading_date": "2026-06-05",
+          "close": 4546.0
+        },
+        {
+          "trading_date": "2026-06-08",
+          "close": 4389.0
+        },
+        {
+          "trading_date": "2026-06-09",
+          "close": 4427.0
+        },
+        {
+          "trading_date": "2026-06-10",
+          "close": 4310.0
+        },
+        {
+          "trading_date": "2026-06-11",
+          "close": 4203.0
+        },
+        {
+          "trading_date": "2026-06-12",
+          "close": 4276.0
+        },
+        {
+          "trading_date": "2026-06-15",
+          "close": 4400.0
+        },
+        {
+          "trading_date": "2026-06-16",
+          "close": 4412.0
+        },
+        {
+          "trading_date": "2026-06-17",
+          "close": 4421.0
+        },
+        {
+          "trading_date": "2026-06-18",
+          "close": 4396.0
+        },
+        {
+          "trading_date": "2026-06-22",
+          "close": 4293.0
+        },
+        {
+          "trading_date": "2026-06-23",
+          "close": 4217.0
+        },
+        {
+          "trading_date": "2026-06-24",
+          "close": 4203.0
+        },
+        {
+          "trading_date": "2026-06-25",
+          "close": 4103.0
+        },
+        {
+          "trading_date": "2026-06-26",
+          "close": 4157.0
+        },
+        {
+          "trading_date": "2026-06-29",
+          "close": 4185.0
+        },
+        {
+          "trading_date": "2026-06-30",
+          "close": 4151.0
+        },
+        {
+          "trading_date": "2026-07-01",
+          "close": 4092.0
+        },
+        {
+          "trading_date": "2026-07-02",
+          "close": 4204.0
+        },
+        {
+          "trading_date": "2026-07-03",
+          "close": 4320.0
+        },
+        {
+          "trading_date": "2026-07-06",
+          "close": 4305.0
+        },
+        {
+          "trading_date": "2026-07-07",
+          "close": 4293.0
+        },
+        {
+          "trading_date": "2026-07-08",
+          "close": 4275.0
+        },
+        {
+          "trading_date": "2026-07-09",
+          "close": 4272.0
+        },
+        {
+          "trading_date": "2026-07-13",
+          "close": 4228.0
+        },
+        {
+          "trading_date": "2026-07-14",
+          "close": 4194.0
+        },
+        {
+          "trading_date": "2026-07-15",
+          "close": 4190.0
+        },
+        {
+          "trading_date": "2026-07-16",
+          "close": 4202.0
+        },
+        {
+          "trading_date": "2026-07-17",
+          "close": 4180.0
+        },
+        {
+          "trading_date": "2026-07-20",
+          "close": 4181.0
+        },
+        {
+          "trading_date": "2026-07-21",
+          "close": 4273.0
+        },
+        {
+          "trading_date": "2026-07-22",
+          "close": 4316.0
+        },
+        {
+          "trading_date": "2026-07-23",
+          "close": 4291.0
+        },
+        {
+          "trading_date": "2026-07-24",
+          "close": 4239.0
+        },
+        {
+          "trading_date": "2026-07-27",
+          "close": 4286.0
+        },
+        {
+          "trading_date": "2026-07-28",
+          "close": 4245.0
+        },
+        {
+          "trading_date": "2026-07-29",
+          "close": 4233.0
+        },
+        {
+          "trading_date": "2026-07-30",
+          "close": 4251.0
+        },
+        {
+          "trading_date": "2026-07-31",
+          "close": 4264.0
+        },
+        {
+          "trading_date": "2026-08-03",
+          "close": 4262.0
+        },
+        {
+          "trading_date": "2026-08-04",
+          "close": 4266.0
+        },
+        {
+          "trading_date": "2026-08-05",
+          "close": 4355.0
+        },
+        {
+          "trading_date": "2026-08-06",
+          "close": 4439.0
+        },
+        {
+          "trading_date": "2026-08-07",
+          "close": 4484.0
+        },
+        {
+          "trading_date": "2026-08-10",
+          "close": 4529.0
+        },
+        {
+          "trading_date": "2026-08-11",
+          "close": 4551.0
+        },
+        {
+          "trading_date": "2026-08-12",
+          "close": 4584.0
+        },
+        {
+          "trading_date": "2026-08-13",
+          "close": 4551.0
+        },
+        {
+          "trading_date": "2026-08-14",
+          "close": 4483.0
+        },
+        {
+          "trading_date": "2026-08-17",
+          "close": 4530.0
+        },
+        {
+          "trading_date": "2026-08-18",
+          "close": 4543.0
+        },
+        {
+          "trading_date": "2026-08-19",
+          "close": 4501.0
+        },
+        {
+          "trading_date": "2026-08-20",
+          "close": 4634.0
+        },
+        {
+          "trading_date": "2026-08-21",
+          "close": 4692.0
+        },
+        {
+          "trading_date": "2026-08-24",
+          "close": 4790.0
+        },
+        {
+          "trading_date": "2026-08-25",
+          "close": 4778.0
+        },
+        {
+          "trading_date": "2026-08-26",
+          "close": 4770.0
+        },
+        {
+          "trading_date": "2026-08-27",
+          "close": 4711.0
+        },
+        {
+          "trading_date": "2026-08-28",
+          "close": 4704.0
+        },
+        {
+          "trading_date": "2026-08-31",
+          "close": 4558.0
+        },
+        {
+          "trading_date": "2026-09-01",
+          "close": 4536.0
+        },
+        {
+          "trading_date": "2026-09-02",
+          "close": 4449.0
+        },
+        {
+          "trading_date": "2026-09-03",
+          "close": 4549.0
+        },
+        {
+          "trading_date": "2026-09-04",
+          "close": 4570.0
+        },
+        {
+          "trading_date": "2026-09-07",
+          "close": 4489.0
+        },
+        {
+          "trading_date": "2026-09-08",
+          "close": 4487.0
+        },
+        {
+          "trading_date": "2026-09-09",
+          "close": 4486.0
+        },
+        {
+          "trading_date": "2026-09-10",
+          "close": 4507.0
+        },
+        {
+          "trading_date": "2026-09-11",
+          "close": 4459.0
+        },
+        {
+          "trading_date": "2026-09-14",
+          "close": 4442.0
+        },
+        {
+          "trading_date": "2026-09-15",
+          "close": 4422.0
+        },
+        {
+          "trading_date": "2026-09-16",
+          "close": 4472.0
+        },
+        {
+          "trading_date": "2026-09-17",
+          "close": 4457.0
+        },
+        {
+          "trading_date": "2026-09-18",
+          "close": 4515.0
+        },
+        {
+          "trading_date": "2026-09-21",
+          "close": 4473.0
+        },
+        {
+          "trading_date": "2026-09-22",
+          "close": 4432.0
+        },
+        {
+          "trading_date": "2026-09-23",
+          "close": 4433.0
+        },
+        {
+          "trading_date": "2026-09-24",
+          "close": 4407.0
+        },
+        {
+          "trading_date": "2026-09-29",
+          "close": 4275.0
+        },
+        {
+          "trading_date": "2026-09-30",
+          "close": 4323.0
+        },
+        {
+          "trading_date": "2026-10-01",
+          "close": 4305.0
+        },
+        {
+          "trading_date": "2026-10-02",
+          "close": 4314.0
+        },
+        {
+          "trading_date": "2026-10-05",
+          "close": 4268.0
+        },
+        {
+          "trading_date": "2026-10-06",
+          "close": 4257.0
+        },
+        {
+          "trading_date": "2026-10-07",
+          "close": 4250.0
+        },
+        {
+          "trading_date": "2026-10-08",
+          "close": 4262.0
+        },
+        {
+          "trading_date": "2026-10-12",
+          "close": 4327.0
+        },
+        {
+          "trading_date": "2026-10-13",
+          "close": 4367.0
+        },
+        {
+          "trading_date": "2026-10-14",
+          "close": 4310.0
+        },
+        {
+          "trading_date": "2026-10-15",
+          "close": 4335.0
+        },
+        {
+          "trading_date": "2026-10-16",
+          "close": 4386.0
+        },
+        {
+          "trading_date": "2026-10-19",
+          "close": 4403.0
+        },
+        {
+          "trading_date": "2026-10-20",
+          "close": 4364.0
+        },
+        {
+          "trading_date": "2026-10-21",
+          "close": 4324.0
+        },
+        {
+          "trading_date": "2026-10-22",
+          "close": 4324.0
+        },
+        {
+          "trading_date": "2026-10-27",
+          "close": 4207.0
+        },
+        {
+          "trading_date": "2026-10-28",
+          "close": 4235.0
+        },
+        {
+          "trading_date": "2026-10-29",
+          "close": 4253.0
+        },
+        {
+          "trading_date": "2026-10-30",
+          "close": 4200.0
+        },
+        {
+          "trading_date": "2026-11-02",
+          "close": 4121.0
+        },
+        {
+          "trading_date": "2026-11-03",
+          "close": 4155.0
+        },
+        {
+          "trading_date": "2026-11-04",
+          "close": 4272.0
+        },
+        {
+          "trading_date": "2026-11-05",
+          "close": 4386.0
+        },
+        {
+          "trading_date": "2026-11-06",
+          "close": 4281.0
+        },
+        {
+          "trading_date": "2026-11-09",
+          "close": 4369.0
+        },
+        {
+          "trading_date": "2026-11-10",
+          "close": 4386.0
+        },
+        {
+          "trading_date": "2026-11-11",
+          "close": 4319.0
+        },
+        {
+          "trading_date": "2026-11-12",
+          "close": 4223.0
+        },
+        {
+          "trading_date": "2026-11-13",
+          "close": 4143.0
+        },
+        {
+          "trading_date": "2026-11-16",
+          "close": 4108.0
+        },
+        {
+          "trading_date": "2026-11-17",
+          "close": 4127.0
+        },
+        {
+          "trading_date": "2026-11-18",
+          "close": 4037.0
+        },
+        {
+          "trading_date": "2026-11-19",
+          "close": 3983.0
+        },
+        {
+          "trading_date": "2026-11-20",
+          "close": 3796.0
+        },
+        {
+          "trading_date": "2026-11-23",
+          "close": 3872.0
+        },
+        {
+          "trading_date": "2026-11-24",
+          "close": 3867.0
+        }
+      ],
+      "ai_summary": {
+        "text": "今日國際金價在技術面偏冷的氛圍下下跌 0.48%，且美元兌台幣走弱（-0.28%）理論上會加大台幣計價黃金的下行壓力。然而台企銀黃金存摺卻逆勢微升 0.21%，推測可能源於本地市場買盤支撐、或國內外報價時間差與溢價微調所帶來的影響。",
+        "generated_date": "2026-11-24",
+        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
+      },
+      "passbook_quote": {
+        "sell": 3867.0,
+        "buy": 3824.0,
+        "spread": 43.0,
+        "listed_at": "2026-11-24 15:25:09"
+      }
+    },
     "00635U": {
       "code": "00635U",
       "display_name": "元大S&P黃金",
@@ -601,1175 +1770,6 @@
         "generated_date": "2026-11-24",
         "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
       }
-    },
-    "GCF": {
-      "code": "GCF",
-      "display_name": "國際盤黃金（COMEX）",
-      "asset_class": "commodity_futures",
-      "asset_class_note": "追蹤COMEX黃金期貨（Yahoo Finance代碼GC=F），不是銀行間即期黃金報價（真正的XAUUSD）；兩者走勢高度連動、價差通常很小，但不是同一個報價來源。是台灣黃金相關標的（00635U、00708L、銀行黃金存摺）的共同定價基礎，本身無法在台灣交易所直接買賣。",
-      "badge": "COMEX期貨報價，非台股標的",
-      "pullback_scale": 1.0,
-      "quote_delay_note": "Yahoo Finance 免費期貨資料通常延遲約 10 分鐘，此標的的即時價格不會比這個延遲更即時，跟 TWSE 標的的近乎即時報價不同。",
-      "data_source": {
-        "name": "Yahoo Finance (GC=F)",
-        "as_of": "2026-11-24"
-      },
-      "latest": {
-        "trading_date": "2026-11-24",
-        "close": 3633.300048828125,
-        "volume": null,
-        "quote_time": "2026-11-24 13:58",
-        "is_realtime": true,
-        "prev_close": 3651.39990234375
-      },
-      "indicators": {
-        "ma20": 3900.759973144531,
-        "rsi14": 32.51178398088193,
-        "bollinger": {
-          "upper": 4241.762475506044,
-          "middle": 3900.759973144531,
-          "lower": 3559.757470783018
-        },
-        "macd": {
-          "macd": -130.7866220028086,
-          "signal": -99.19902550882767,
-          "histogram": -31.587596493980925
-        },
-        "volatility_squeeze": {
-          "short_vol": 0.028921162650673623,
-          "long_vol": 0.020729707887203946,
-          "ratio": 1.3951553397684926,
-          "is_compressed": false
-        },
-        "relative_position": {
-          "position": 0.17770769734052932,
-          "label": "相對低點區"
-        },
-        "pullback_stage": {
-          "recent_high": 4181.10009765625,
-          "pullback_pct": 13.092251649062996,
-          "stage": "最後 40%（等重新轉強）",
-          "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
-        },
-        "prior_low": null,
-        "prior_low_broken": true,
-        "technical_score": {
-          "scores": {
-            "rsi14": 67.48821601911807,
-            "bollinger": 89.158073639227,
-            "ma20": 84.23179378009387,
-            "macd": 85.99268617669702
-          },
-          "composite": 81.71769240378399,
-          "label": "技術面偏冷"
-        },
-        "stage_signals": {
-          "trend_intact": false,
-          "momentum_stabilizing": true,
-          "macd_golden_cross": false
-        }
-      },
-      "chart": [
-        {
-          "trading_date": "2026-05-26",
-          "close": 4502.2998046875
-        },
-        {
-          "trading_date": "2026-05-27",
-          "close": 4448.39990234375
-        },
-        {
-          "trading_date": "2026-05-28",
-          "close": 4499.2998046875
-        },
-        {
-          "trading_date": "2026-05-29",
-          "close": 4593.0
-        },
-        {
-          "trading_date": "2026-06-01",
-          "close": 4506.2998046875
-        },
-        {
-          "trading_date": "2026-06-02",
-          "close": 4519.89990234375
-        },
-        {
-          "trading_date": "2026-06-03",
-          "close": 4466.89990234375
-        },
-        {
-          "trading_date": "2026-06-04",
-          "close": 4505.0
-        },
-        {
-          "trading_date": "2026-06-05",
-          "close": 4365.2998046875
-        },
-        {
-          "trading_date": "2026-06-08",
-          "close": 4363.39990234375
-        },
-        {
-          "trading_date": "2026-06-09",
-          "close": 4286.39990234375
-        },
-        {
-          "trading_date": "2026-06-10",
-          "close": 4133.2998046875
-        },
-        {
-          "trading_date": "2026-06-11",
-          "close": 4114.0
-        },
-        {
-          "trading_date": "2026-06-12",
-          "close": 4238.7998046875
-        },
-        {
-          "trading_date": "2026-06-15",
-          "close": 4351.60009765625
-        },
-        {
-          "trading_date": "2026-06-16",
-          "close": 4354.39990234375
-        },
-        {
-          "trading_date": "2026-06-17",
-          "close": 4381.39990234375
-        },
-        {
-          "trading_date": "2026-06-18",
-          "close": 4245.89990234375
-        },
-        {
-          "trading_date": "2026-06-22",
-          "close": 4202.7001953125
-        },
-        {
-          "trading_date": "2026-06-23",
-          "close": 4149.39990234375
-        },
-        {
-          "trading_date": "2026-06-24",
-          "close": 4008.800048828125
-        },
-        {
-          "trading_date": "2026-06-25",
-          "close": 4047.60009765625
-        },
-        {
-          "trading_date": "2026-06-26",
-          "close": 4096.2998046875
-        },
-        {
-          "trading_date": "2026-06-29",
-          "close": 4038.89990234375
-        },
-        {
-          "trading_date": "2026-06-30",
-          "close": 4038.5
-        },
-        {
-          "trading_date": "2026-07-01",
-          "close": 4082.39990234375
-        },
-        {
-          "trading_date": "2026-07-02",
-          "close": 4125.7001953125
-        },
-        {
-          "trading_date": "2026-07-06",
-          "close": 4167.5
-        },
-        {
-          "trading_date": "2026-07-07",
-          "close": 4157.39990234375
-        },
-        {
-          "trading_date": "2026-07-08",
-          "close": 4082.39990234375
-        },
-        {
-          "trading_date": "2026-07-09",
-          "close": 4140.7998046875
-        },
-        {
-          "trading_date": "2026-07-10",
-          "close": 4113.7001953125
-        },
-        {
-          "trading_date": "2026-07-13",
-          "close": 4005.699951171875
-        },
-        {
-          "trading_date": "2026-07-14",
-          "close": 4069.699951171875
-        },
-        {
-          "trading_date": "2026-07-15",
-          "close": 4051.800048828125
-        },
-        {
-          "trading_date": "2026-07-16",
-          "close": 3992.10009765625
-        },
-        {
-          "trading_date": "2026-07-17",
-          "close": 4018.800048828125
-        },
-        {
-          "trading_date": "2026-07-20",
-          "close": 4015.89990234375
-        },
-        {
-          "trading_date": "2026-07-21",
-          "close": 4076.39990234375
-        },
-        {
-          "trading_date": "2026-07-22",
-          "close": 4151.89990234375
-        },
-        {
-          "trading_date": "2026-07-23",
-          "close": 4050.199951171875
-        },
-        {
-          "trading_date": "2026-07-24",
-          "close": 4070.800048828125
-        },
-        {
-          "trading_date": "2026-07-27",
-          "close": 4077.0
-        },
-        {
-          "trading_date": "2026-07-28",
-          "close": 4038.699951171875
-        },
-        {
-          "trading_date": "2026-07-29",
-          "close": 4036.300048828125
-        },
-        {
-          "trading_date": "2026-07-30",
-          "close": 4100.10009765625
-        },
-        {
-          "trading_date": "2026-07-31",
-          "close": 4107.0
-        },
-        {
-          "trading_date": "2026-08-03",
-          "close": 4090.5
-        },
-        {
-          "trading_date": "2026-08-04",
-          "close": 4152.60009765625
-        },
-        {
-          "trading_date": "2026-08-05",
-          "close": 4305.2001953125
-        },
-        {
-          "trading_date": "2026-08-06",
-          "close": 4299.60009765625
-        },
-        {
-          "trading_date": "2026-08-07",
-          "close": 4399.7001953125
-        },
-        {
-          "trading_date": "2026-08-10",
-          "close": 4419.7001953125
-        },
-        {
-          "trading_date": "2026-08-11",
-          "close": 4441.10009765625
-        },
-        {
-          "trading_date": "2026-08-12",
-          "close": 4467.5
-        },
-        {
-          "trading_date": "2026-08-13",
-          "close": 4420.39990234375
-        },
-        {
-          "trading_date": "2026-08-14",
-          "close": 4437.2998046875
-        },
-        {
-          "trading_date": "2026-08-17",
-          "close": 4473.7001953125
-        },
-        {
-          "trading_date": "2026-08-18",
-          "close": 4420.60009765625
-        },
-        {
-          "trading_date": "2026-08-19",
-          "close": 4545.2998046875
-        },
-        {
-          "trading_date": "2026-08-20",
-          "close": 4571.39990234375
-        },
-        {
-          "trading_date": "2026-08-21",
-          "close": 4680.60009765625
-        },
-        {
-          "trading_date": "2026-08-24",
-          "close": 4697.7998046875
-        },
-        {
-          "trading_date": "2026-08-25",
-          "close": 4694.5
-        },
-        {
-          "trading_date": "2026-08-26",
-          "close": 4653.2998046875
-        },
-        {
-          "trading_date": "2026-08-27",
-          "close": 4664.0
-        },
-        {
-          "trading_date": "2026-08-28",
-          "close": 4529.89990234375
-        },
-        {
-          "trading_date": "2026-08-31",
-          "close": 4481.5
-        },
-        {
-          "trading_date": "2026-09-01",
-          "close": 4396.39990234375
-        },
-        {
-          "trading_date": "2026-09-02",
-          "close": 4414.60009765625
-        },
-        {
-          "trading_date": "2026-09-03",
-          "close": 4539.89990234375
-        },
-        {
-          "trading_date": "2026-09-04",
-          "close": 4476.60009765625
-        },
-        {
-          "trading_date": "2026-09-08",
-          "close": 4439.0
-        },
-        {
-          "trading_date": "2026-09-09",
-          "close": 4460.7001953125
-        },
-        {
-          "trading_date": "2026-09-10",
-          "close": 4407.2998046875
-        },
-        {
-          "trading_date": "2026-09-11",
-          "close": 4408.89990234375
-        },
-        {
-          "trading_date": "2026-09-14",
-          "close": 4351.89990234375
-        },
-        {
-          "trading_date": "2026-09-15",
-          "close": 4332.7998046875
-        },
-        {
-          "trading_date": "2026-09-16",
-          "close": 4387.5
-        },
-        {
-          "trading_date": "2026-09-17",
-          "close": 4399.7001953125
-        },
-        {
-          "trading_date": "2026-09-18",
-          "close": 4424.89990234375
-        },
-        {
-          "trading_date": "2026-09-21",
-          "close": 4383.89990234375
-        },
-        {
-          "trading_date": "2026-09-22",
-          "close": 4376.39990234375
-        },
-        {
-          "trading_date": "2026-09-23",
-          "close": 4318.39990234375
-        },
-        {
-          "trading_date": "2026-09-24",
-          "close": 4298.0
-        },
-        {
-          "trading_date": "2026-09-25",
-          "close": 4321.2001953125
-        },
-        {
-          "trading_date": "2026-09-28",
-          "close": 4168.39990234375
-        },
-        {
-          "trading_date": "2026-09-29",
-          "close": 4179.7001953125
-        },
-        {
-          "trading_date": "2026-09-30",
-          "close": 4186.7001953125
-        },
-        {
-          "trading_date": "2026-10-01",
-          "close": 4202.2998046875
-        },
-        {
-          "trading_date": "2026-10-02",
-          "close": 4162.2998046875
-        },
-        {
-          "trading_date": "2026-10-05",
-          "close": 4156.7998046875
-        },
-        {
-          "trading_date": "2026-10-06",
-          "close": 4187.10009765625
-        },
-        {
-          "trading_date": "2026-10-07",
-          "close": 4140.7001953125
-        },
-        {
-          "trading_date": "2026-10-08",
-          "close": 4157.0
-        },
-        {
-          "trading_date": "2026-10-09",
-          "close": 4216.2998046875
-        },
-        {
-          "trading_date": "2026-10-12",
-          "close": 4190.60009765625
-        },
-        {
-          "trading_date": "2026-10-13",
-          "close": 4177.2998046875
-        },
-        {
-          "trading_date": "2026-10-14",
-          "close": 4107.89990234375
-        },
-        {
-          "trading_date": "2026-10-15",
-          "close": 4170.10009765625
-        },
-        {
-          "trading_date": "2026-10-16",
-          "close": 4181.10009765625
-        },
-        {
-          "trading_date": "2026-10-19",
-          "close": 4160.10009765625
-        },
-        {
-          "trading_date": "2026-10-20",
-          "close": 4142.60009765625
-        },
-        {
-          "trading_date": "2026-10-21",
-          "close": 4150.0
-        },
-        {
-          "trading_date": "2026-10-22",
-          "close": 4060.39990234375
-        },
-        {
-          "trading_date": "2026-10-23",
-          "close": 4007.89990234375
-        },
-        {
-          "trading_date": "2026-10-26",
-          "close": 4038.39990234375
-        },
-        {
-          "trading_date": "2026-10-27",
-          "close": 4074.60009765625
-        },
-        {
-          "trading_date": "2026-10-28",
-          "close": 4051.60009765625
-        },
-        {
-          "trading_date": "2026-10-29",
-          "close": 4031.39990234375
-        },
-        {
-          "trading_date": "2026-10-30",
-          "close": 3898.89990234375
-        },
-        {
-          "trading_date": "2026-11-02",
-          "close": 3969.60009765625
-        },
-        {
-          "trading_date": "2026-11-03",
-          "close": 3940.39990234375
-        },
-        {
-          "trading_date": "2026-11-04",
-          "close": 4073.0
-        },
-        {
-          "trading_date": "2026-11-05",
-          "close": 4113.5
-        },
-        {
-          "trading_date": "2026-11-06",
-          "close": 4074.89990234375
-        },
-        {
-          "trading_date": "2026-11-09",
-          "close": 4114.5
-        },
-        {
-          "trading_date": "2026-11-10",
-          "close": 4030.199951171875
-        },
-        {
-          "trading_date": "2026-11-11",
-          "close": 4000.5
-        },
-        {
-          "trading_date": "2026-11-12",
-          "close": 3885.300048828125
-        },
-        {
-          "trading_date": "2026-11-13",
-          "close": 3886.300048828125
-        },
-        {
-          "trading_date": "2026-11-16",
-          "close": 3853.0
-        },
-        {
-          "trading_date": "2026-11-17",
-          "close": 3864.199951171875
-        },
-        {
-          "trading_date": "2026-11-18",
-          "close": 3741.89990234375
-        },
-        {
-          "trading_date": "2026-11-19",
-          "close": 3685.5
-        },
-        {
-          "trading_date": "2026-11-20",
-          "close": 3515.39990234375
-        },
-        {
-          "trading_date": "2026-11-23",
-          "close": 3651.39990234375
-        },
-        {
-          "trading_date": "2026-11-24",
-          "close": 3633.699951171875
-        }
-      ],
-      "ai_summary": {
-        "text": "今日COMEX國際金價下跌0.48%，主要受到技術面偏冷與買盤動能不足的影響，呈現短線回檔修正。雖然美元兌台幣下跌0.28%顯示美元略有走弱，但並未對金價帶來支撐，推測整體走勢可能受到市場避險情緒降溫及獲利回吐賣壓所壓制。",
-        "generated_date": "2026-11-24",
-        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
-      }
-    },
-    "TBBGOLD": {
-      "code": "TBBGOLD",
-      "display_name": "台企銀黃金存摺",
-      "asset_class": "bank_gold_passbook",
-      "asset_class_note": "臺灣企銀黃金存摺的公告牌價（新台幣／公克），價格跟著國際金價與美元兌台幣走，但由銀行自行掛牌、一天會更新數次。本站的回檔階段與技術指標都用「本行賣出價」（你向銀行買進的價格）計算；買進價（你賣回給銀行的價格）比賣出價低，兩者的差距就是進出一趟的成本。牌價資料來自銀行公開頁面，僅供參考，實際交易價格以銀行交易確認時顯示的為準。",
-      "badge": "銀行牌價，非即時行情",
-      "pullback_scale": 1.0,
-      "price_digits": 0,
-      "unit": "元／公克",
-      "data_source": {
-        "name": "臺灣企銀黃金存摺牌價",
-        "as_of": "2026-11-24"
-      },
-      "latest": {
-        "trading_date": "2026-11-24",
-        "close": 3880.0,
-        "volume": null,
-        "quote_time": null,
-        "is_realtime": false,
-        "prev_close": 3872.0
-      },
-      "indicators": {
-        "ma20": 4157.3,
-        "rsi14": 32.96226551707257,
-        "bollinger": {
-          "upper": 4493.133947063128,
-          "middle": 4157.3,
-          "lower": 3821.466052936872
-        },
-        "macd": {
-          "macd": -113.25610562762904,
-          "signal": -74.24477335759383,
-          "histogram": -39.01133227003521
-        },
-        "volatility_squeeze": {
-          "short_vol": 0.02255108755864487,
-          "long_vol": 0.019106542974303694,
-          "ratio": 1.1802808906338385,
-          "is_compressed": false
-        },
-        "relative_position": {
-          "position": 0.13838550247116968,
-          "label": "相對低點區"
-        },
-        "pullback_stage": {
-          "recent_high": 4403.0,
-          "pullback_pct": 11.878264819441291,
-          "stage": "最後 40%（等重新轉強）",
-          "hint": "已達較大回檔，最後 40% 務必等重新轉強才進場，避免無限攤平"
-        },
-        "prior_low": null,
-        "prior_low_broken": true,
-        "technical_score": {
-          "scores": {
-            "rsi14": 67.03773448292743,
-            "bollinger": 91.28528435332282,
-            "ma20": 83.35097298727541,
-            "macd": 79.18971794526522
-          },
-          "composite": 80.21592744219772,
-          "label": "技術面偏冷"
-        },
-        "stage_signals": {
-          "trend_intact": false,
-          "momentum_stabilizing": false,
-          "macd_golden_cross": false
-        }
-      },
-      "chart": [
-        {
-          "trading_date": "2026-05-25",
-          "close": 4637.0
-        },
-        {
-          "trading_date": "2026-05-26",
-          "close": 4599.0
-        },
-        {
-          "trading_date": "2026-05-27",
-          "close": 4548.0
-        },
-        {
-          "trading_date": "2026-05-28",
-          "close": 4461.0
-        },
-        {
-          "trading_date": "2026-05-29",
-          "close": 4578.0
-        },
-        {
-          "trading_date": "2026-06-01",
-          "close": 4571.0
-        },
-        {
-          "trading_date": "2026-06-02",
-          "close": 4619.0
-        },
-        {
-          "trading_date": "2026-06-03",
-          "close": 4541.0
-        },
-        {
-          "trading_date": "2026-06-04",
-          "close": 4546.0
-        },
-        {
-          "trading_date": "2026-06-05",
-          "close": 4546.0
-        },
-        {
-          "trading_date": "2026-06-08",
-          "close": 4389.0
-        },
-        {
-          "trading_date": "2026-06-09",
-          "close": 4427.0
-        },
-        {
-          "trading_date": "2026-06-10",
-          "close": 4310.0
-        },
-        {
-          "trading_date": "2026-06-11",
-          "close": 4203.0
-        },
-        {
-          "trading_date": "2026-06-12",
-          "close": 4276.0
-        },
-        {
-          "trading_date": "2026-06-15",
-          "close": 4400.0
-        },
-        {
-          "trading_date": "2026-06-16",
-          "close": 4412.0
-        },
-        {
-          "trading_date": "2026-06-17",
-          "close": 4421.0
-        },
-        {
-          "trading_date": "2026-06-18",
-          "close": 4396.0
-        },
-        {
-          "trading_date": "2026-06-22",
-          "close": 4293.0
-        },
-        {
-          "trading_date": "2026-06-23",
-          "close": 4217.0
-        },
-        {
-          "trading_date": "2026-06-24",
-          "close": 4203.0
-        },
-        {
-          "trading_date": "2026-06-25",
-          "close": 4103.0
-        },
-        {
-          "trading_date": "2026-06-26",
-          "close": 4157.0
-        },
-        {
-          "trading_date": "2026-06-29",
-          "close": 4185.0
-        },
-        {
-          "trading_date": "2026-06-30",
-          "close": 4151.0
-        },
-        {
-          "trading_date": "2026-07-01",
-          "close": 4092.0
-        },
-        {
-          "trading_date": "2026-07-02",
-          "close": 4204.0
-        },
-        {
-          "trading_date": "2026-07-03",
-          "close": 4320.0
-        },
-        {
-          "trading_date": "2026-07-06",
-          "close": 4305.0
-        },
-        {
-          "trading_date": "2026-07-07",
-          "close": 4293.0
-        },
-        {
-          "trading_date": "2026-07-08",
-          "close": 4275.0
-        },
-        {
-          "trading_date": "2026-07-09",
-          "close": 4272.0
-        },
-        {
-          "trading_date": "2026-07-13",
-          "close": 4228.0
-        },
-        {
-          "trading_date": "2026-07-14",
-          "close": 4194.0
-        },
-        {
-          "trading_date": "2026-07-15",
-          "close": 4190.0
-        },
-        {
-          "trading_date": "2026-07-16",
-          "close": 4202.0
-        },
-        {
-          "trading_date": "2026-07-17",
-          "close": 4180.0
-        },
-        {
-          "trading_date": "2026-07-20",
-          "close": 4181.0
-        },
-        {
-          "trading_date": "2026-07-21",
-          "close": 4273.0
-        },
-        {
-          "trading_date": "2026-07-22",
-          "close": 4316.0
-        },
-        {
-          "trading_date": "2026-07-23",
-          "close": 4291.0
-        },
-        {
-          "trading_date": "2026-07-24",
-          "close": 4239.0
-        },
-        {
-          "trading_date": "2026-07-27",
-          "close": 4286.0
-        },
-        {
-          "trading_date": "2026-07-28",
-          "close": 4245.0
-        },
-        {
-          "trading_date": "2026-07-29",
-          "close": 4233.0
-        },
-        {
-          "trading_date": "2026-07-30",
-          "close": 4251.0
-        },
-        {
-          "trading_date": "2026-07-31",
-          "close": 4264.0
-        },
-        {
-          "trading_date": "2026-08-03",
-          "close": 4262.0
-        },
-        {
-          "trading_date": "2026-08-04",
-          "close": 4266.0
-        },
-        {
-          "trading_date": "2026-08-05",
-          "close": 4355.0
-        },
-        {
-          "trading_date": "2026-08-06",
-          "close": 4439.0
-        },
-        {
-          "trading_date": "2026-08-07",
-          "close": 4484.0
-        },
-        {
-          "trading_date": "2026-08-10",
-          "close": 4529.0
-        },
-        {
-          "trading_date": "2026-08-11",
-          "close": 4551.0
-        },
-        {
-          "trading_date": "2026-08-12",
-          "close": 4584.0
-        },
-        {
-          "trading_date": "2026-08-13",
-          "close": 4551.0
-        },
-        {
-          "trading_date": "2026-08-14",
-          "close": 4483.0
-        },
-        {
-          "trading_date": "2026-08-17",
-          "close": 4530.0
-        },
-        {
-          "trading_date": "2026-08-18",
-          "close": 4543.0
-        },
-        {
-          "trading_date": "2026-08-19",
-          "close": 4501.0
-        },
-        {
-          "trading_date": "2026-08-20",
-          "close": 4634.0
-        },
-        {
-          "trading_date": "2026-08-21",
-          "close": 4692.0
-        },
-        {
-          "trading_date": "2026-08-24",
-          "close": 4790.0
-        },
-        {
-          "trading_date": "2026-08-25",
-          "close": 4778.0
-        },
-        {
-          "trading_date": "2026-08-26",
-          "close": 4770.0
-        },
-        {
-          "trading_date": "2026-08-27",
-          "close": 4711.0
-        },
-        {
-          "trading_date": "2026-08-28",
-          "close": 4704.0
-        },
-        {
-          "trading_date": "2026-08-31",
-          "close": 4558.0
-        },
-        {
-          "trading_date": "2026-09-01",
-          "close": 4536.0
-        },
-        {
-          "trading_date": "2026-09-02",
-          "close": 4449.0
-        },
-        {
-          "trading_date": "2026-09-03",
-          "close": 4549.0
-        },
-        {
-          "trading_date": "2026-09-04",
-          "close": 4570.0
-        },
-        {
-          "trading_date": "2026-09-07",
-          "close": 4489.0
-        },
-        {
-          "trading_date": "2026-09-08",
-          "close": 4487.0
-        },
-        {
-          "trading_date": "2026-09-09",
-          "close": 4486.0
-        },
-        {
-          "trading_date": "2026-09-10",
-          "close": 4507.0
-        },
-        {
-          "trading_date": "2026-09-11",
-          "close": 4459.0
-        },
-        {
-          "trading_date": "2026-09-14",
-          "close": 4442.0
-        },
-        {
-          "trading_date": "2026-09-15",
-          "close": 4422.0
-        },
-        {
-          "trading_date": "2026-09-16",
-          "close": 4472.0
-        },
-        {
-          "trading_date": "2026-09-17",
-          "close": 4457.0
-        },
-        {
-          "trading_date": "2026-09-18",
-          "close": 4515.0
-        },
-        {
-          "trading_date": "2026-09-21",
-          "close": 4473.0
-        },
-        {
-          "trading_date": "2026-09-22",
-          "close": 4432.0
-        },
-        {
-          "trading_date": "2026-09-23",
-          "close": 4433.0
-        },
-        {
-          "trading_date": "2026-09-24",
-          "close": 4407.0
-        },
-        {
-          "trading_date": "2026-09-29",
-          "close": 4275.0
-        },
-        {
-          "trading_date": "2026-09-30",
-          "close": 4323.0
-        },
-        {
-          "trading_date": "2026-10-01",
-          "close": 4305.0
-        },
-        {
-          "trading_date": "2026-10-02",
-          "close": 4314.0
-        },
-        {
-          "trading_date": "2026-10-05",
-          "close": 4268.0
-        },
-        {
-          "trading_date": "2026-10-06",
-          "close": 4257.0
-        },
-        {
-          "trading_date": "2026-10-07",
-          "close": 4250.0
-        },
-        {
-          "trading_date": "2026-10-08",
-          "close": 4262.0
-        },
-        {
-          "trading_date": "2026-10-12",
-          "close": 4327.0
-        },
-        {
-          "trading_date": "2026-10-13",
-          "close": 4367.0
-        },
-        {
-          "trading_date": "2026-10-14",
-          "close": 4310.0
-        },
-        {
-          "trading_date": "2026-10-15",
-          "close": 4335.0
-        },
-        {
-          "trading_date": "2026-10-16",
-          "close": 4386.0
-        },
-        {
-          "trading_date": "2026-10-19",
-          "close": 4403.0
-        },
-        {
-          "trading_date": "2026-10-20",
-          "close": 4364.0
-        },
-        {
-          "trading_date": "2026-10-21",
-          "close": 4324.0
-        },
-        {
-          "trading_date": "2026-10-22",
-          "close": 4324.0
-        },
-        {
-          "trading_date": "2026-10-27",
-          "close": 4207.0
-        },
-        {
-          "trading_date": "2026-10-28",
-          "close": 4235.0
-        },
-        {
-          "trading_date": "2026-10-29",
-          "close": 4253.0
-        },
-        {
-          "trading_date": "2026-10-30",
-          "close": 4200.0
-        },
-        {
-          "trading_date": "2026-11-02",
-          "close": 4121.0
-        },
-        {
-          "trading_date": "2026-11-03",
-          "close": 4155.0
-        },
-        {
-          "trading_date": "2026-11-04",
-          "close": 4272.0
-        },
-        {
-          "trading_date": "2026-11-05",
-          "close": 4386.0
-        },
-        {
-          "trading_date": "2026-11-06",
-          "close": 4281.0
-        },
-        {
-          "trading_date": "2026-11-09",
-          "close": 4369.0
-        },
-        {
-          "trading_date": "2026-11-10",
-          "close": 4386.0
-        },
-        {
-          "trading_date": "2026-11-11",
-          "close": 4319.0
-        },
-        {
-          "trading_date": "2026-11-12",
-          "close": 4223.0
-        },
-        {
-          "trading_date": "2026-11-13",
-          "close": 4143.0
-        },
-        {
-          "trading_date": "2026-11-16",
-          "close": 4108.0
-        },
-        {
-          "trading_date": "2026-11-17",
-          "close": 4127.0
-        },
-        {
-          "trading_date": "2026-11-18",
-          "close": 4037.0
-        },
-        {
-          "trading_date": "2026-11-19",
-          "close": 3983.0
-        },
-        {
-          "trading_date": "2026-11-20",
-          "close": 3796.0
-        },
-        {
-          "trading_date": "2026-11-23",
-          "close": 3872.0
-        },
-        {
-          "trading_date": "2026-11-24",
-          "close": 3880.0
-        }
-      ],
-      "ai_summary": {
-        "text": "今日國際金價在技術面偏冷的氛圍下下跌 0.48%，且美元兌台幣走弱（-0.28%）理論上會加大台幣計價黃金的下行壓力。然而台企銀黃金存摺卻逆勢微升 0.21%，推測可能源於本地市場買盤支撐、或國內外報價時間差與溢價微調所帶來的影響。",
-        "generated_date": "2026-11-24",
-        "disclaimer": "AI 根據價格與總體數字推測，非真實新聞報導，僅供研究參考。"
-      },
-      "passbook_quote": {
-        "sell": 3880.0,
-        "buy": 3836.0,
-        "spread": 44.0,
-        "listed_at": "2026-11-24 13:45:11"
-      }
     }
   },
   "macro_context": {
@@ -2304,7 +2304,7 @@
       },
       {
         "date": "2026-11-24",
-        "close": 32.862998962402344
+        "close": 32.93199920654297
       }
     ],
     "stale": false,
