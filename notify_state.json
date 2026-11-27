@@ -1,12 +1,4 @@
 {
-  "00635U": {
-    "stage": "最後 40%（等重新轉強）",
-    "prior_low_price": 36.32
-  },
-  "00708L": {
-    "stage": "最後 40%（等重新轉強）",
-    "prior_low_price": 50.9
-  },
   "GCF": {
     "stage": "最後 40%（等重新轉強）",
     "prior_low_price": 3515.39990234375
@@ -14,5 +6,13 @@
   "TBBGOLD": {
     "stage": "最後 40%（等重新轉強）",
     "prior_low_price": 3776.0
+  },
+  "00635U": {
+    "stage": "最後 40%（等重新轉強）",
+    "prior_low_price": 36.32
+  },
+  "00708L": {
+    "stage": "最後 40%（等重新轉強）",
+    "prior_low_price": 50.9
   }
 }
