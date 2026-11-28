@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T11:40:30.519620+00:00",
+  "generated_at": "2026-11-28T11:44:16.545439+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -2462,5 +2462,87 @@
       "disclaimer": "AI 依程式抓到的國際新聞標題整理，可能有誤，請以原始新聞為準；不預測價格、不構成投資建議。"
     },
     "data_source": "Yahoo Finance（市場數字）、GDELT 國際新聞標題＋Gemini 整理（新聞綜合）"
+  },
+  "backtest": {
+    "name": "國際金價（COMEX 期貨）",
+    "period": {
+      "from": "2021-11-29",
+      "to": "2026-11-27"
+    },
+    "horizons": [
+      {
+        "months": 6,
+        "windows": 221,
+        "strategies": [
+          {
+            "key": "lump",
+            "name": "一次買進",
+            "avg_return_pct": 10.7,
+            "beat_lump_pct": null,
+            "avg_worst_pct": -5.1,
+            "avg_invested_pct": 100,
+            "avg_return_on_invested_pct": 10.7
+          },
+          {
+            "key": "dca",
+            "name": "定期定額（每月）",
+            "avg_return_pct": 6.1,
+            "beat_lump_pct": 25,
+            "avg_worst_pct": -3.1,
+            "avg_invested_pct": 100,
+            "avg_return_on_invested_pct": 6.1
+          },
+          {
+            "key": "discipline",
+            "name": "照紀律分批",
+            "avg_return_pct": 6.0,
+            "beat_lump_pct": 32,
+            "avg_worst_pct": -3.4,
+            "avg_invested_pct": 73,
+            "avg_return_on_invested_pct": 9.6
+          }
+        ]
+      },
+      {
+        "months": 12,
+        "windows": 196,
+        "strategies": [
+          {
+            "key": "lump",
+            "name": "一次買進",
+            "avg_return_pct": 27.6,
+            "beat_lump_pct": null,
+            "avg_worst_pct": -4.3,
+            "avg_invested_pct": 100,
+            "avg_return_on_invested_pct": 27.6
+          },
+          {
+            "key": "dca",
+            "name": "定期定額（每月）",
+            "avg_return_pct": 14.3,
+            "beat_lump_pct": 14,
+            "avg_worst_pct": -2.5,
+            "avg_invested_pct": 100,
+            "avg_return_on_invested_pct": 14.3
+          },
+          {
+            "key": "discipline",
+            "name": "照紀律分批",
+            "avg_return_pct": 17.2,
+            "beat_lump_pct": 19,
+            "avg_worst_pct": -2.4,
+            "avg_invested_pct": 78,
+            "avg_return_on_invested_pct": 23.2
+          }
+        ]
+      }
+    ],
+    "notes": [
+      "簡化版紀律：只用回檔門檻（近 30 天高點回檔 3／4／6／9% 投入 20／20／20／40%），沒有納入趨勢、止跌、轉強與跌破前低停止加碼等前提。",
+      "沒有計手續費與買賣價差；沒投入的錢以 0% 報酬計。",
+      "分批的目的是降低買在高點的風險，不是賺最多；上漲趨勢中一次買進的報酬常會比較高。",
+      "歷史回測不代表未來，不是預測，也不構成投資建議。"
+    ],
+    "generated_date": "2026-11-28"
   }
 }
