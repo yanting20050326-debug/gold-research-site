@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T10:53:14.449678+00:00",
+  "generated_at": "2026-11-28T11:04:22.079970+00:00",
   "disclaimer": "商品／避險資產研究參考，不構成投資建議，不自動下單，不保證收益。",
   "auto_refresh_seconds": 60,
   "live_refresh_seconds": 15,
@@ -2408,7 +2408,59 @@
         "stale": false
       }
     ],
-    "news": null,
-    "data_source": "Yahoo Finance（市場數字）、Google 搜尋接地的 Gemini（新聞綜合）"
+    "news": {
+      "overall": "近七日國際金價下跌1.25%，金價修正至多月低點後吸引買盤回流反彈。市場關注聯準會決策與美國通膨數據，美債殖利率回落提供支撐，惟恐慌指數大幅下降令避險需求減弱，市場呈現多空交織。",
+      "factors": [
+        {
+          "name": "利率與聯準會",
+          "view": "偏多",
+          "summary": "市場關注聯準會決策與政策展望，搭配美國10年期公債殖利率降至4.936%，對金價影響偏多。"
+        },
+        {
+          "name": "通膨",
+          "view": "偏空",
+          "summary": "市場觀望即將公布的美國通膨數據，帶動金價微幅走低，對金價影響偏空。"
+        },
+        {
+          "name": "地緣政治與避險",
+          "view": "偏空",
+          "summary": "市場權衡美國關稅計畫，搭配VIX恐慌指數下降33.66%，避險需求降溫對金價偏空。"
+        },
+        {
+          "name": "央行購金與資金流向",
+          "view": "偏多",
+          "summary": "金價經歷大幅下跌後吸引買盤回流並反彈3.9%，資金逢低進場對金價影響偏多。"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Gold Tests $3, 500 as Traders Look Beyond December Fed Decision",
+          "url": "https://www.ibtimes.co.in/gold-falls-nearly-11-mcx-traders-brace-fed-rate-hike-908590",
+          "domain": "ibtimes.co.in",
+          "date": "2026-11-22"
+        },
+        {
+          "title": "Gold Slips as Investors Weigh Fed Outlook, US Tariff Plans",
+          "url": "https://www.livemint.com/market/gold-slips-as-investors-weigh-fed-outlook-us-tariff-plans-11795564730725.html",
+          "domain": "livemint.com",
+          "date": "2026-11-25"
+        },
+        {
+          "title": "Gold Edges Lower as Markets Await US Inflation Data",
+          "url": "https://english.aawsat.com/business/5344936-gold-edges-lower-markets-await-us-inflation-data",
+          "domain": "english.aawsat.com",
+          "date": "2026-11-24"
+        },
+        {
+          "title": "Gold Price Rebounds 3. 9% After Steep Weekly Drop as Buyers Return – NaturalNews. com",
+          "url": "https://www.naturalnews.com/2026-11-24-gold-rebounds-after-steep-weekly-drop.html",
+          "domain": "naturalnews.com",
+          "date": "2026-11-25"
+        }
+      ],
+      "generated_date": "2026-11-28",
+      "disclaimer": "AI 依程式抓到的國際新聞標題整理，可能有誤，請以原始新聞為準；不預測價格、不構成投資建議。"
+    },
+    "data_source": "Yahoo Finance（市場數字）、GDELT 國際新聞標題＋Gemini 整理（新聞綜合）"
   }
 }
